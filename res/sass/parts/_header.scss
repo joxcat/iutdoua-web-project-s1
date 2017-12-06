@@ -1,0 +1,41 @@
+header {
+  display: inline-flex;
+  width: 100%;
+  background-color: $dark;
+  & ul {
+    height: 1em;
+    margin: auto 0;
+    list-style: none;
+    padding: 0;
+    & li {
+      display: inline-block;
+    }
+  }
+  & form {
+    height: 1.5rem;
+    margin: auto 0;
+    padding: 0;
+    background-color: $light;
+    border-radius: 0.25rem;
+    padding: 0 0 0 0.5em;
+    & input {
+      border: none;
+      min-width: 13em;
+    }
+    & button {
+      height: 1.6rem;
+      margin: auto 0;
+      border: none;
+      border-radius: 0 0.25rem 0.25rem 0;
+      background-color: $primary;
+      color: $light;
+    }
+  }
+}
+
+#logo {
+  & img {
+    margin: 0.5em;
+    max-width: 4em;
+  }
+}

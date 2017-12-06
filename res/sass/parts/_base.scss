@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  font-family: $base-font-family;
+}
+
+body {
+  line-height: 1.5;
+  color: $dark;
+}
+
+h1,
+h2,
+strong {
+  color: $darker;
+}
+
+a {
+  color: $links;
+  text-decoration: none;
+}
