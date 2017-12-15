@@ -1,6 +1,11 @@
 $tablet-width: 768px;
-// $smartphone-width: 320px;
 $desktop-width: 1024px;
+
+@mixin iconize($color, $circle, $shadow) {
+  color: $color;
+  background-color: $circle;
+  @include longshadow($shadow);
+}
 
 @mixin phone {
   @media (max-width: #{$tablet-width - 1px}) {
@@ -34,4 +39,37 @@ $desktop-width: 1024px;
 
 @mixin title {
   font-family: "Open Sans Condensed", sans-serif;
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@function makelongshadow($color) {
+  $val: 0px 0px $color;
+  @for $i from 1 through $shadowlength {
+    $val: #{$val}, #{$i}px #{$i}px #{$color};
+  }
+  @return $val;
+}
+
+@mixin longshadow($color) {
+  text-shadow: makelongshadow($color);
 }

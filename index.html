@@ -1,14 +1,11 @@
 <!--
 repo: https://github.com/Blackksoulls/iutdoua-web-project-s1/
 
-Dev with love, music, php -S localhost:80 and sass -^-watch sass:css -^-style compressed
+Dev with love, music, php -S localhost:80 and sass -^-watch sass:css
 Copyright (c) 2017 Johan Planchon.
 
 carousel ? https://codepen.io/joshhunt/pen/LVQZRa
 http://benschwarz.github.io/gallery-css/#item-3s
-
-idea: http://www.csszengarden.com/215/
-http://www.csszengarden.com/217/
 -->
 <!DOCTYPE html>
 <html>
@@ -32,28 +29,43 @@ http://www.csszengarden.com/217/
   </head>
   <body lang="fr">
     <header>
-      <a id="logo"><img alt="logo" src="res/pictures/logo_kmarket.png" /></a>
-      <ul>
-        <li id="catdropdown">
-          Cat&eacute;gories
-        </li>
-        <li class="common">
-          <a>Promos</a>
-        </li>
-        <li class="common">
-          <a>A propos</a>
-        </li>
-        <li class="user">
-          <a>Panier</a>
-        </li>
-        <li class="user">
-          <a>Compte</a>
-        </li>
-      </ul>
-      <form action="/search">
-        <input name="query" type="search" placeholder="Rechercher sur KMarket" />
-        <button><span class="fa fa-search" aria-hidden="true"></span></button>
-      </form>
+      <nav id="menu">
+        <ul>
+          <li>
+            <i class="fa fa-eercast"></i>
+            <p>Cat&eacute;gories</p>
+          </li>
+          <li>
+            <i class="fa fa-eercast"></i>
+            <p>Promos</p>
+          </li>
+          <li>
+            <i class="fa fa-eercast"></i>
+            <p>A propos</p>
+          </li>
+          <li>
+            <i class="fa fa-eercast"></i>
+            <p>Panier</p>
+          </li>
+          <li>
+            <i class="fa fa-eercast"></i>
+            <p>Compte</p>
+          </li>
+          <!-- <li id="searchbar">
+            <form action="/search">
+              <input name="query" type="search" placeholder="Rechercher sur KMarket" />
+              <button><span class="fa fa-search" aria-hidden="true"></span></button>
+            </form>
+          </li> -->
+          <li>
+            <a href="#"><i class="fa fa-times"></i></a>
+            <p>Fermer</p>
+          </li>
+        </ul>
+      </nav>
+      <div id="main">
+        <a id="open" class="fa fa-bars fa-2x" href="#main"></a>
+      </div>
     </header>
     <section id="infos">
 

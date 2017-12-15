@@ -1,2 +1,142 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Raleway:300");*{margin:0;font-family:"Raleway","Helvetica","Arial",sans-serif}body{line-height:1.5;color:#555}h1,h2,strong{color:#333}a{color:#DD403A;text-decoration:none}header{display:inline-flex;width:100%;background-color:#555}header ul{height:1em;margin:auto 0;list-style:none;padding:0}header ul li{display:inline-block}header form{height:1.5rem;margin:auto 0;padding:0;background-color:#FFFCE8;border-radius:0.25rem;padding:0 0 0 0.5em}header form input{border:none;min-width:13em}header form button{height:1.6rem;margin:auto 0;border:none;border-radius:0 0.25rem 0.25rem 0;background-color:#29ABE2;color:#FFFCE8}#logo img{margin:0.5em;max-width:4em}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Raleway:300");
+/* VARS DEFAULTS */
+/* COLORS */
+/* IMPORTS */
+* {
+  margin: 0;
+  font-family: "Raleway", "Helvetica", "Arial", sans-serif; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  line-height: 1.5;
+  color: #555;
+  background: #111;
+  height: 100%; }
+
+h1,
+h2,
+strong {
+  color: #333; }
+
+/*header {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: $dark;
+  padding: 0 15em;
+  & ul {
+    height: 1em;
+    margin: auto 0;
+    list-style: none;
+    padding: 0;
+    & li {
+      display: inline-block;
+    }
+  }
+  & form {
+    height: 1.5rem;
+    margin: auto 0;
+    padding: 0;
+    background-color: $light;
+    border-radius: 0.25rem;
+    padding: 0 0 0 0.5em;
+    & input {
+      border: none;
+      min-width: 13em;
+    }
+    & button {
+      height: 1.6rem;
+      margin: auto 0;
+      border: none;
+      border-radius: 0 0.25rem 0.25rem 0;
+      background-color: $primary;
+      color: $light;
+    }
+  }
+}
+
+#logo {
+  & img {
+    margin: 0.5em;
+    max-width: 4em;
+  }
+}*/
+#main:target {
+  margin-top: 8rem;
+  width: 90%;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+#main {
+  background: #eff0f1;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  -moz-transition: all 0.3s ease 0.6s;
+  -o-transition: all 0.3s ease 0.6s;
+  -webkit-transition: all 0.3s ease 0.6s;
+  transition: all 0.3s ease 0.6s;
+  z-index: 10;
+  padding: 2em;
+  position: relative; }
+
+/*
+  menu icon css3
+*/
+#open {
+  color: #666;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  cursor: pointer; }
+  #open:hover {
+    color: #222; }
+  #open:focus {
+    display: none; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 5%;
+  color: white;
+  z-index: 1; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none; }
+    nav ul li {
+      text-align: center;
+      margin: 1em 2em;
+      cursor: pointer;
+      position: relative; }
+      nav ul li:hover {
+        opacity: 0.75;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      nav ul li:nth-child(1) i {
+        color: white;
+        background-color: #448AFF;
+        text-shadow: 0px 0px #82B1FF, 1px 1px #82B1FF, 2px 2px #82B1FF, 3px 3px #82B1FF, 4px 4px #82B1FF, 5px 5px #82B1FF, 6px 6px #82B1FF, 7px 7px #82B1FF, 8px 8px #82B1FF, 9px 9px #82B1FF, 10px 10px #82B1FF, 11px 11px #82B1FF, 12px 12px #82B1FF, 13px 13px #82B1FF, 14px 14px #82B1FF, 15px 15px #82B1FF, 16px 16px #82B1FF, 17px 17px #82B1FF, 18px 18px #82B1FF, 19px 19px #82B1FF, 20px 20px #82B1FF, 21px 21px #82B1FF, 22px 22px #82B1FF, 23px 23px #82B1FF, 24px 24px #82B1FF, 25px 25px #82B1FF, 26px 26px #82B1FF, 27px 27px #82B1FF, 28px 28px #82B1FF, 29px 29px #82B1FF, 30px 30px #82B1FF, 31px 31px #82B1FF, 32px 32px #82B1FF, 33px 33px #82B1FF, 34px 34px #82B1FF, 35px 35px #82B1FF, 36px 36px #82B1FF, 37px 37px #82B1FF, 38px 38px #82B1FF, 39px 39px #82B1FF, 40px 40px #82B1FF, 41px 41px #82B1FF, 42px 42px #82B1FF, 43px 43px #82B1FF, 44px 44px #82B1FF, 45px 45px #82B1FF, 46px 46px #82B1FF, 47px 47px #82B1FF, 48px 48px #82B1FF, 49px 49px #82B1FF, 50px 50px #82B1FF, 51px 51px #82B1FF, 52px 52px #82B1FF, 53px 53px #82B1FF, 54px 54px #82B1FF, 55px 55px #82B1FF, 56px 56px #82B1FF, 57px 57px #82B1FF, 58px 58px #82B1FF, 59px 59px #82B1FF, 60px 60px #82B1FF; }
+      nav ul li i {
+        font-size: 1.5em;
+        background-color: #10d7af;
+        padding: 0.75em;
+        border-radius: 50%;
+        color: #333;
+        display: inline-block;
+        overflow: hidden;
+        text-shadow: 0px 0px #fff, 1px 1px #fff, 2px 2px #fff, 3px 3px #fff, 4px 4px #fff, 5px 5px #fff, 6px 6px #fff, 7px 7px #fff, 8px 8px #fff, 9px 9px #fff, 10px 10px #fff, 11px 11px #fff, 12px 12px #fff, 13px 13px #fff, 14px 14px #fff, 15px 15px #fff, 16px 16px #fff, 17px 17px #fff, 18px 18px #fff, 19px 19px #fff, 20px 20px #fff, 21px 21px #fff, 22px 22px #fff, 23px 23px #fff, 24px 24px #fff, 25px 25px #fff, 26px 26px #fff, 27px 27px #fff, 28px 28px #fff, 29px 29px #fff, 30px 30px #fff, 31px 31px #fff, 32px 32px #fff, 33px 33px #fff, 34px 34px #fff, 35px 35px #fff, 36px 36px #fff, 37px 37px #fff, 38px 38px #fff, 39px 39px #fff, 40px 40px #fff, 41px 41px #fff, 42px 42px #fff, 43px 43px #fff, 44px 44px #fff, 45px 45px #fff, 46px 46px #fff, 47px 47px #fff, 48px 48px #fff, 49px 49px #fff, 50px 50px #fff, 51px 51px #fff, 52px 52px #fff, 53px 53px #fff, 54px 54px #fff, 55px 55px #fff, 56px 56px #fff, 57px 57px #fff, 58px 58px #fff, 59px 59px #fff, 60px 60px #fff; }
+      nav ul li p {
+        line-height: 2.5; }
+
 /*# sourceMappingURL=main.css.map */

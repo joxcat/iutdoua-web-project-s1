@@ -3,9 +3,13 @@
   font-family: $base-font-family;
 }
 
-body {
+*, *::before, *::after { @include box-sizing(border-box) }
+
+html, body {
   line-height: 1.5;
   color: $dark;
+  background: #111;
+  height: 100%;
 }
 
 h1,
@@ -14,7 +18,7 @@ strong {
   color: $darker;
 }
 
-a {
-  color: $links;
-  text-decoration: none;
-}
+// a {
+//   color: $links;
+//   text-decoration: none;
+// }
