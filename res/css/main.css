@@ -18,9 +18,7 @@
 
 html, body {
   line-height: 1.5;
-  color: #555;
-  background: #111;
-  height: 100%; }
+  background: #111; }
 
 h1,
 h2,
@@ -133,7 +131,7 @@ nav {
 #main {
   margin-top: 0;
   background: #EFF0F1;
-  min-height: 95vh;
+  min-height: 90vh;
   margin: 0 auto;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -172,7 +170,7 @@ footer {
   z-index: 10;
   margin: 0;
   padding: 2em 0;
-  min-height: 5vh;
+  height: 10vh;
   background-color: #555;
   color: #EFF0F1;
   font-size: 0.8em;
@@ -197,13 +195,43 @@ footer {
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease; }
 
-.popover {
-  display: none; }
-  .popover img {
-    width: 10%; }
-
-.popover:target {
-  display: inline; }
+#QR {
+  z-index: 9000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  overflow: hidden;
+  -moz-transition: opacity 0.5s ease, height 1s ease 1s;
+  -o-transition: opacity 0.5s ease, height 1s ease 1s;
+  -webkit-transition: opacity 0.5s ease, height 1s ease 1s;
+  transition: opacity 0.5s ease, height 1s ease 1s; }
+  #QR .modal {
+    background-color: #EFF0F1;
+    border-radius: 0.25em;
+    padding: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+    #QR .modal p {
+      font-size: 3vmin;
+      margin: auto 0;
+      float: left;
+      width: 50%; }
+    #QR .modal img {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      float: right;
+      width: 40%; }
+  #QR:target {
+    opacity: 1;
+    height: auto; }
 
 /* scroll to top */
 #return-to-top {

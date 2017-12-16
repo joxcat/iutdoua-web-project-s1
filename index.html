@@ -31,9 +31,14 @@ https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=htt
     <link rel="stylesheet" href="res/css/main.css" />
   </head>
   <body lang="fr">
-    <div class="popover">
-      <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/"/>
-    </div>
+    <a id="QR" href="#">
+      <div class="modal">
+        <p>
+          Scannez ce QR code pour arriver ici !
+        </p>
+        <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/"/>
+      </div>
+    </a>
     <header>
       <nav id="menu"> <!-- Menu adapted from https://codepen.io/markmurray/pen/yyNZpz -->
         <ul>

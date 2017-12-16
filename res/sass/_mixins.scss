@@ -25,6 +25,21 @@ $desktop-width: 1024px;
   }
 }
 
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
@@ -72,6 +87,13 @@ $desktop-width: 1024px;
 	-ms-transform: $transforms;
 	-webkit-transform: $transforms;
   transform: $transforms;
+}
+
+@mixin animation($anim...) {
+  -webkit-animation: $anim; /* Safari 4+ */
+  -moz-animation: $anim; /* Fx 5+ */
+  -o-animation: $anim; /* Opera 12+ */
+  animation: $anim; /* IE 10+, Fx 29+ */
 }
 
 // from https://codepen.io/markmurray/pen/yyNZpz

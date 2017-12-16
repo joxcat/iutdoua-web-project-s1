@@ -1,10 +1,39 @@
-.popover {
-  display: none;
-  & img {
-    width: 10%;
+#QR {
+  z-index: 9000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  overflow: hidden;
+  @include transition(opacity 0.5s ease, height 1s ease 1s);
+  & .modal {
+    background-color: $light;
+    border-radius: 0.25em;
+    padding: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include gbox_shadow(3);
+    & p {
+      font-size: 3vmin;
+      margin: auto 0;
+      float: left;
+      width: 50%;
+    }
+    & img {
+      @include gbox_shadow(1);
+      float: right;
+      width: 40%;
+    }
   }
-}
-
-.popover:target {
-  display: inline;
+  &:target {
+    opacity: 1;
+    height: auto;
+  }
 }
