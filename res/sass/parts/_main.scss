@@ -1,0 +1,39 @@
+/* core page */
+#main {
+  margin-top: 0;
+  background: $light;
+  min-height: 95vh;
+  margin: 0 auto;
+  @include transition(all 0.3s ease);
+  z-index: 10;
+  padding: 2rem;
+  position: relative;
+  @include gbox-shadow(2);
+
+  & #wrap {
+    top: 1rem;
+    position: relative;
+    max-width: 80rem;
+    min-height: 30rem;
+    background-color: #E0E0E0;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    @include gbox-shadow(2);
+  }
+}
+
+@include phone {
+  #main {
+    padding: 0;
+    & #work { margin: 1rem 0 0 1rem; }
+    & #disabled { top: 1rem; margin-left: 1rem; }
+    & form { margin: 1rem 1rem 0 0; }
+    &:target #wrap {
+      top: 2rem;
+    }
+    & #wrap {
+      max-width: 100%;
+      width: 100vw;
+    }
+  }
+};

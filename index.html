@@ -8,7 +8,7 @@ carousel ? https://codepen.io/joshhunt/pen/LVQZRa
 http://benschwarz.github.io/gallery-css/#item-3s
 
 QR CODES
-https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/family
+https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/
 -->
 <!DOCTYPE html>
 <html>
@@ -31,6 +31,9 @@ https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=htt
     <link rel="stylesheet" href="res/css/main.css" />
   </head>
   <body lang="fr">
+    <div class="popover">
+      <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/"/>
+    </div>
     <header>
       <nav id="menu"> <!-- Menu adapted from https://codepen.io/markmurray/pen/yyNZpz -->
         <ul>
@@ -41,9 +44,9 @@ https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=htt
             </a>
           </li>
           <li>
-            <a href="/#promos">
-              <i class="fa fa-eur"></i>
-              <p>Promos</p>
+            <a href="#QR">
+              <i class="fa fa-qrcode"></i>
+              <p>QR code</p>
             </a>
           </li>
           <li>
@@ -79,7 +82,7 @@ https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=htt
         <input name="query" type="search" />
       </form>
       <a href="#top" id="return-to-top"><i class="fa fa-chevron-up fa-2x"></i></a>
-      <div class="wrap">
+      <div id="wrap">
         <section id="infos">
 
         </section>
@@ -91,7 +94,8 @@ https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=htt
     <footer>
       <span>Copyright &copy; <a href="https://git.kuro.ml/">Johan Planchon</a> 2017</span>
       <span><a href="/about">Sources</a></span>
-      <span><a class="W3C" href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
+      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarket.kuro.ml%2Fres%2Fcss%2Fmain.css&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
+      <span><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarket.kuro.ml%2F">HTML Valide !</a></span>
     </footer>
   </body>
 </html>

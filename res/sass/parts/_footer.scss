@@ -1,5 +1,9 @@
 footer {
-  height: 5vh;
+  z-index: 10;
+
+  margin: 0;
+  padding: 2em 0;
+  min-height: 5vh;
   background-color: $dark;
   color: $light;
   font-size: 0.8em;
@@ -10,7 +14,7 @@ footer {
   & span {
     line-height: 1;
     height: 1em;
-    margin: auto 0;
+    margin: auto 2em;
     & a {
       color: lighten($links, 20%);
       text-decoration: none;

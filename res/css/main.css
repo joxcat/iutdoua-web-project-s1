@@ -129,8 +129,50 @@ nav {
 
   #main:target {
     margin-top: 30vh; } }
+/* core page */
+#main {
+  margin-top: 0;
+  background: #EFF0F1;
+  min-height: 95vh;
+  margin: 0 auto;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 10;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  #main #wrap {
+    top: 1rem;
+    position: relative;
+    max-width: 80rem;
+    min-height: 30rem;
+    background-color: #E0E0E0;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+@media (max-width: 767px) {
+  #main {
+    padding: 0; }
+    #main #work {
+      margin: 1rem 0 0 1rem; }
+    #main #disabled {
+      top: 1rem;
+      margin-left: 1rem; }
+    #main form {
+      margin: 1rem 1rem 0 0; }
+    #main:target #wrap {
+      top: 2rem; }
+    #main #wrap {
+      max-width: 100%;
+      width: 100vw; } }
 footer {
-  height: 5vh;
+  z-index: 10;
+  margin: 0;
+  padding: 2em 0;
+  min-height: 5vh;
   background-color: #555;
   color: #EFF0F1;
   font-size: 0.8em;
@@ -140,7 +182,7 @@ footer {
   footer span {
     line-height: 1;
     height: 1em;
-    margin: auto 0; }
+    margin: auto 2em; }
     footer span a {
       color: #ec9491;
       text-decoration: none;
@@ -155,37 +197,35 @@ footer {
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease; }
 
-/* core page */
-#main {
-  margin-top: 0;
-  background: #EFF0F1;
-  min-height: 95vh;
-  margin: 0 auto;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  z-index: 10;
-  padding: 2em;
-  position: relative; }
+.popover {
+  display: none; }
+  .popover img {
+    width: 10%; }
+
+.popover:target {
+  display: inline; }
 
 /* scroll to top */
 #return-to-top {
+  padding: 0.5em;
+  background-color: #29ABE2;
+  opacity: 0.5;
+  border-radius: 50%;
   position: absolute;
   right: 2rem;
   bottom: 2rem;
   z-index: 25;
-  color: #666;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  color: #EFF0F1;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
   #return-to-top:hover {
-    color: #333;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
+    opacity: 0.75;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
 
 /* Searchbar ideo and lot of code from https://codepen.io/912lab/pen/LsplC */
 #main form {

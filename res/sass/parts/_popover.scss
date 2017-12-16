@@ -1,0 +1,10 @@
+.popover {
+  display: none;
+  & img {
+    width: 10%;
+  }
+}
+
+.popover:target {
+  display: inline;
+}
