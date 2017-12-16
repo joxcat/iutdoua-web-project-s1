@@ -47,6 +47,18 @@ $desktop-width: 1024px;
   box-sizing: $box-model;
 }
 
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin border-radius($rad) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  border-radius: $rad;
+}
+
 @mixin transition($transition...) {
     -moz-transition: $transition;
     -o-transition: $transition;

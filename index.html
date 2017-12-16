@@ -6,6 +6,9 @@ Copyright (c) 2017 Johan Planchon.
 
 carousel ? https://codepen.io/joshhunt/pen/LVQZRa
 http://benschwarz.github.io/gallery-css/#item-3s
+
+QR CODES
+https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/family
 -->
 <!DOCTYPE html>
 <html>
@@ -29,52 +32,66 @@ http://benschwarz.github.io/gallery-css/#item-3s
   </head>
   <body lang="fr">
     <header>
-      <nav id="menu">
+      <nav id="menu"> <!-- Menu adapted from https://codepen.io/markmurray/pen/yyNZpz -->
         <ul>
           <li>
-            <i class="fa fa-eercast"></i>
-            <p>Cat&eacute;gories</p>
+            <a href="/categories">
+              <i class="fa fa-eercast"></i>
+              <p>Cat&eacute;gories</p>
+            </a>
           </li>
           <li>
-            <i class="fa fa-eercast"></i>
-            <p>Promos</p>
+            <a href="/#promos">
+              <i class="fa fa-eur"></i>
+              <p>Promos</p>
+            </a>
           </li>
           <li>
-            <i class="fa fa-eercast"></i>
-            <p>A propos</p>
+            <a href="/about">
+              <i class="fa fa-vcard"></i>
+              <p>A propos</p>
+            </a>
           </li>
           <li>
-            <i class="fa fa-eercast"></i>
-            <p>Panier</p>
+            <a href="/order">
+              <i class="fa fa-shopping-cart"></i>
+              <p>Panier</p>
+            </a>
           </li>
           <li>
-            <i class="fa fa-eercast"></i>
-            <p>Compte</p>
+            <a href="/account">
+              <i class="fa fa-user"></i>
+              <p>Compte</p>
+            </a>
           </li>
-          <!-- <li id="searchbar">
-            <form action="/search">
-              <input name="query" type="search" placeholder="Rechercher sur KMarket" />
-              <button><span class="fa fa-search" aria-hidden="true"></span></button>
-            </form>
-          </li> -->
           <li>
-            <a href="#"><i class="fa fa-times"></i></a>
-            <p>Fermer</p>
+            <a href="#"><i class="fa fa-times"></i>
+              <p>Fermer</p>
+            </a>
           </li>
         </ul>
       </nav>
-      <div id="main">
-        <a id="open" class="fa fa-bars fa-2x" href="#main"></a>
-      </div>
     </header>
-    <section id="infos">
+    <div id="main">
+      <a id="work" class="fa fa-bars fa-2x" href="#main"></a>
+      <a id="disabled" class="fa fa-bars fa-2x"></a>
+      <form action="/search">
+        <input name="query" type="search" />
+      </form>
+      <a href="#top" id="return-to-top"><i class="fa fa-chevron-up fa-2x"></i></a>
+      <div class="wrap">
+        <section id="infos">
 
-    </section>
-    <section id="promos">
+        </section>
+        <section id="promos">
 
-    </section>
+        </section>
+      </div>
+    </div>
     <footer>
-
+      <span>Copyright &copy; <a href="https://git.kuro.ml/">Johan Planchon</a> 2017</span>
+      <span><a href="/about">Sources</a></span>
+      <span><a class="W3C" href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
     </footer>
   </body>
 </html>

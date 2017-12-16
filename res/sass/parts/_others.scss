@@ -1,0 +1,69 @@
+/* core page */
+#main {
+  margin-top: 0;
+  background: $light;
+  min-height: 95vh;
+  margin: 0 auto;
+  @include transition(all 0.3s ease);
+  z-index: 10;
+  padding: 2em;
+  position: relative;
+}
+
+/* scroll to top */
+#return-to-top {
+	position: absolute;
+	right: 2rem;
+	bottom: 2rem;
+	z-index: 25;
+	color: #666;
+	@include transition(all 0.3s ease);
+	&:hover { color: #333; @include transition(all 0.3s ease); }
+}
+
+/* Searchbar ideo and lot of code from https://codepen.io/912lab/pen/LsplC */
+#main form {
+	float: right;
+	z-index: 20;
+	position: relative;
+
+	& input {
+		height: 1rem;
+		outline: none;
+		-webkit-appearance: textfield;
+		-webkit-box-sizing: content-box;
+		font-size: 100%;
+		background: #ededed url(../search.svg) no-repeat 0.5rem center;
+		background-size: 1rem;
+		border: solid 1px #ccc;
+		padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+		width: 1rem;
+		color: transparent;
+		cursor: pointer;
+
+		@include border-radius(10em);
+
+		@include transition(all 0.5s);
+
+		&::-webkit-search-decoration,
+		&::-webkit-search-cancel-button { display: none; }
+		&:hover { background-color: #fff; }
+		&:focus {
+			width: 16rem;
+			max-width: 50vw;
+			padding-left: 2rem;
+			color: #000;
+			background-color: #fff;
+			cursor: auto;
+			border-color: $primary;
+
+			@include box-shadow(0 0 0.2rem rgba(100, 100, 100, .5));
+		}
+	}
+}
+
+.W3C img {
+  border: 0;
+  width: 2rem;
+  height: 1rem;
+}
