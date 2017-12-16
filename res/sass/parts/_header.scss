@@ -1,111 +1,80 @@
-/*header {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  background-color: $dark;
-  padding: 0 15em;
-  & ul {
-    height: 1em;
-    margin: auto 0;
-    list-style: none;
-    padding: 0;
-    & li {
-      display: inline-block;
-    }
-  }
-  & form {
-    height: 1.5rem;
-    margin: auto 0;
-    padding: 0;
-    background-color: $light;
-    border-radius: 0.25rem;
-    padding: 0 0 0 0.5em;
-    & input {
-      border: none;
-      min-width: 13em;
-    }
-    & button {
-      height: 1.6rem;
-      margin: auto 0;
-      border: none;
-      border-radius: 0 0.25rem 0.25rem 0;
-      background-color: $primary;
-      color: $light;
-    }
-  }
-}
-
-#logo {
-  & img {
-    margin: 0.5em;
-    max-width: 4em;
-  }
-}*/
-
+// ### Menu highly inspired by https://codepen.io/markmurray/pen/yyNZpz ###
+/* menu interaction without js */
 #main:target {
   margin-top: 8rem;
   width: 90%;
   @include transition(all 0.3s ease);
+	& #work {
+    display: none;
+	}
+  & #disabled { // workaround because I can't use "pointer-events: none" that is not officially supported in CSS3 but will be in CSS4
+    cursor: default;
+    color: #aaa;
+    display: inline;
+  }
 }
 
-#main {
-  background: #eff0f1;
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  @include transition(all 0.3s ease 0.6s);
-  z-index: 10;
-  padding: 2em;
-  position: relative;
-}
-
-/*
-  menu icon css3
-*/
-#open {
+/* menu icon */
+#work {
   color: #666;
   position: relative;
-  display: block;
   text-decoration: none;
   cursor: pointer;
   &:hover {
-    color: #222;
-  }
-  &:focus {
-    display: none;
+    color: #333;
   }
 }
+#disabled {
+  display: none;
+  position: relative;
+  text-decoration: none;
+  cursor: default;
+  color: #aaa;
+}
 
+/* menu parts */
 nav {
+  width: 95%;
   position: fixed;
-  top: 0; left: 5%;
-  color: white;
+  top: 0;
+	left: 5%;
+	padding-right: 5%;
   z-index: 1;
 
   ul {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
     list-style: none;
+    height: 8em;
+    width: 100%;
     li {
       text-align: center;
-      margin: 1em 2em;
       cursor: pointer;
-      position: relative;
       &:hover { opacity: 0.75; @include transition(all 0.3s ease); }
-
-      &:nth-child(1) i { @include iconize(white, #448AFF, #82B1FF); }
+      &:nth-child(1) i { @include iconize($light, #448AFF, #82B1FF); }
+      &:nth-child(2) i { @include iconize($light, #FF5722, #FF9E80); }*
+      &:nth-child(4) i { @include iconize($light, #01579B, #0277BD); }
+      &:nth-child(5) i { @include iconize($dark, #FFEB3B, #FFF59D); }
+      &:nth-child(6) i { @include iconize($light, #303F9F, rgba(0,0,0,0)); }
 
       i {
         font-size: 1.5em;
-        background-color: #10d7af;
+        width: 2.5em;
+        height: 2.5em;
+        background-color: #fff;
         padding: 0.75em;
         border-radius: 50%;
-        color: #333;
+        color: #000;
         display: inline-block;
         overflow: hidden;
-        @include longshadow(#fff);
+        @include longshadow(#999);
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
       }
 
       p {
@@ -114,3 +83,16 @@ nav {
     }
   }
 }
+
+@include phone {
+  nav {
+    top: 2%;
+    & ul li {
+      margin: 0 0.5rem;
+    }
+  }
+
+  #main:target {
+    margin-top: 30vh;
+  }
+};
