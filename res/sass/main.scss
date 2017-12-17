@@ -9,7 +9,9 @@ $shadowlength: 60;
 
 /* COLORS */
 $light: #EFF0F1 !default;
+$lightbg: #E0E0E0 !default;
 $dark: #555 !default;
+$darkbg: #424242 !default;
 $darker: #333 !default;
 $links: #DD403A !default;
 $primary: #29ABE2 !default;
@@ -22,5 +24,6 @@ $primary: #29ABE2 !default;
   "parts/main",
   "parts/footer",
   "parts/popover",
+  "parts/carousel",
   "parts/others"
 ;

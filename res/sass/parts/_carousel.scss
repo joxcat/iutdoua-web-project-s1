@@ -1,0 +1,71 @@
+.carousel {
+  margin-bottom: 0.5em;
+  & .card {
+    position: relative;
+    background-color: $light;
+    border-radius: 0.3rem;
+    padding: 0.5em;
+    @include gbox-shadow(2);
+    min-width: 50%;
+    max-width: 75%;
+    margin: 0 auto 0 auto;
+    & a {
+      color: $dark;
+      text-decoration: none;
+      @include transition(all 0.3s ease);
+      &:hover {
+        & h3 {
+          color: lighten($dark, 20%);
+          @include transition(all 0.3s ease);
+        }
+        & img {
+          opacity: 0.75;
+          @include transition(all 0.3s ease);
+        }
+      }
+      & h3 {
+        font-family: 'Open Sans Condensed', "Helvetica", sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+    & p {
+      color: $dark;
+      &:first-of-type {
+        margin-left: 16%;
+        position: relative;
+        top: -0.5em;
+        font-size: 0.85em;
+        color: $links;
+      }
+      &:not(:first-of-type) {
+        margin: 1em;
+        text-align: center;
+      }
+    }
+    & img {
+      @include transition(all 0.3s ease);
+      margin: 0 15%;
+      width: 70%;
+      height: 60%;
+    }
+  }
+  & > :not(:first-child) {
+    display: none;
+  }
+  & .next {
+    position: absolute;
+    right: 3%;
+    top: 45%;
+  }
+}
+
+#bitcoin:target {
+
+}
+
+@include phone {
+  .carousel .card {
+    max-width: 100%;
+  }
+};

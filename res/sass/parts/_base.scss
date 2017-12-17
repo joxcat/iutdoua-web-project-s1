@@ -18,10 +18,20 @@ html, body {
 
 h1,
 h2,
-strong {
+h3,
+h4 {
   color: $darker;
 }
 
+strong {
+  color: darken($links, 20%);
+}
+
+h2::before {
+  content: "#";
+  margin: 0 0.1em 0 0;
+  color: $primary;
+}
 // a {
 //   color: $links;
 //   text-decoration: none;

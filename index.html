@@ -7,8 +7,6 @@ Copyright (c) 2017 Johan Planchon.
 carousel ? https://codepen.io/joshhunt/pen/LVQZRa
 http://benschwarz.github.io/gallery-css/#item-3s
 
-QR CODES
-https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/
 -->
 <!DOCTYPE html>
 <html>
@@ -27,8 +25,8 @@ https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=htt
     <meta name="msapplication-config" content="/res/favicons/browserconfig.xml">
     <meta name="theme-color" content="#448aff">
     <!-- css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="res/css/main.css" />
+    <link rel="stylesheet" href="res/css/fontawesome_custom_CSS3_valid.css" /> <!-- Fontawesome icons workaround to be valid CSS3 : fontawesome.io -->
   </head>
   <body lang="fr">
     <a id="QR" href="#">
@@ -89,10 +87,40 @@ https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=htt
       <a href="#top" id="return-to-top"><i class="fa fa-chevron-up fa-2x"></i></a>
       <div id="wrap">
         <section id="infos">
-
+          <h2>Bienvenue !</h2>
+          <p>
+            Bienvenue sur KMarket le web market qui vous permet d'acheter un peu de tout à des prix d&eacute;fiant toute concurrence.
+          </p>
+          <p>
+            <strong>C'est no&euml;l, profitez de promos sur l'ensemble du catalogue jusqu'au 25/12 minuit !</strong>
+          </p>
         </section>
         <section id="promos">
-
+          <h2>Promos</h2>
+          <div class="carousel">
+            <div id="unicorn" class="card">
+              <a href="/article/licorne.html"><h3>Vrai licorne</h3>
+              <img alt="real licorne" src="http://via.placeholder.com/240x144" /></a>
+              <p class="price">9000&euro;</p>
+              <p class="description">Licorne r&eacute;elle en état de fonctionnement.</p>
+              <a href="#bitcoin" class="next"><i class="fa fa-chevron-right"></i></a>
+            </div>
+            <div id="bitcoin" class="card">
+              <a href="#unicorn" class="prev"><i class="fa fa-chevron-left"></i></a>
+              <a href="/article/bitcoin.html"><h3>1er Bitcoin</h3></a>
+              <img alt="chocolate bitcoin" src="http://via.placeholder.com/240x144" />
+              <p class="price">3.50&euro;</p>
+              <p class="description">Le premier Bitcoin en or massif au monde, article unique.</p>
+              <a href="#elves" class="next"><i class="fa fa-chevron-right"></i></a>
+            </div>
+            <div id="elves" class="card">
+              <a href="#bitcoin" class="prev"><i class="fa fa-chevron-left"></i></a>
+              <a href="/article/licorne.html"><h3>Brochette de lutins</h3></a>
+              <img alt="elves killed with brutality on a spear" src="http://via.placeholder.com/240x144" />
+              <p>9000&euro;</p>
+              <p>Brochette de lutins heureux pour vos f&ecirc;tes de No&euml;l.</p>
+            </div>
+          </div>
         </section>
       </div>
     </div>
