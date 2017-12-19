@@ -26,7 +26,6 @@
         background-color: $darkbg;
         color: $light;
         border-radius: 0 0 0.3rem 0.3rem;
-
         & h2 {
           color: $light;
         }
@@ -57,5 +56,11 @@
       width: 100vw;
       text-align: justify;
     }
+  }
+};
+
+@include desktop {
+  #main #wrap section:nth-of-type(2) {
+    min-height: 22rem;
   }
 };

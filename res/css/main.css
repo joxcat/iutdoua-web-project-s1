@@ -190,6 +190,9 @@ nav {
       max-width: 100%;
       width: 100vw;
       text-align: justify; } }
+@media (min-width: 1024px) {
+  #main #wrap section:nth-of-type(2) {
+    min-height: 22rem; } }
 footer {
   z-index: 10;
   margin: 0;
@@ -268,16 +271,18 @@ footer {
     #QR .modal p {
       font-size: 5vmin; } }
 .carousel {
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-flow: row wrap; }
   .carousel .card {
+    display: block;
     position: relative;
     background-color: #EFF0F1;
     border-radius: 0.3rem;
     padding: 0.5em;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    min-width: 50%;
-    max-width: 75%;
-    margin: 0 auto 0 auto; }
+    margin: 0 auto 0.75rem auto;
+    overflow: hidden; }
     .carousel .card a {
       color: #555;
       text-decoration: none;
@@ -310,7 +315,8 @@ footer {
         font-size: 0.85em;
         color: #DD403A; }
       .carousel .card p:not(:first-of-type) {
-        margin: 1em;
+        display: relative;
+        margin: 0 1em 2em 1em;
         text-align: center; }
     .carousel .card img {
       -moz-transition: all 0.3s ease;
@@ -320,23 +326,38 @@ footer {
       margin: 0 15%;
       width: 70%;
       height: 60%; }
-  .carousel > :not(:first-child) {
-    display: none; }
-  .carousel .next {
-    position: absolute;
-    right: 3%;
-    top: 45%; }
 
 @media (max-width: 767px) {
   .carousel .card {
     max-width: 100%; } }
+@media (min-width: 1024px) {
+  .carousel .card {
+    width: 30%;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .carousel .card:hover {
+      opacity: 1;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      width: 35%; }
+    .carousel .card:not(:hover) {
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      opacity: 0.5;
+      width: 25%; } }
 /* scroll to top */
 #return-to-top {
   padding: 0.5em;
   background-color: #29ABE2;
-  opacity: 0.5;
+  opacity: 0.25;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   right: 2rem;
   bottom: 2rem;
   z-index: 25;
@@ -345,12 +366,6 @@ footer {
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
-  #return-to-top:hover {
-    opacity: 0.75;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease; }
 
 /* Searchbar ideo and lot of code from https://codepen.io/912lab/pen/LsplC */
 #main form {
@@ -397,5 +412,13 @@ footer {
   border: 0;
   width: 2rem;
   height: 1rem; }
+
+@media (min-width: 1024px) {
+  #return-to-top:hover {
+    opacity: 0.75;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; } }
 
 /*# sourceMappingURL=main.css.map */

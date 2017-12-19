@@ -1,14 +1,16 @@
 .carousel {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-flow: row wrap;
   & .card {
+    display: block;
     position: relative;
     background-color: $light;
     border-radius: 0.3rem;
     padding: 0.5em;
     @include gbox-shadow(2);
-    min-width: 50%;
-    max-width: 75%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 0.75rem auto;
+    overflow: hidden;
     & a {
       color: $dark;
       text-decoration: none;
@@ -39,7 +41,8 @@
         color: $links;
       }
       &:not(:first-of-type) {
-        margin: 1em;
+        display: relative;
+        margin: 0 1em 2em 1em;
         text-align: center;
       }
     }
@@ -50,22 +53,27 @@
       height: 60%;
     }
   }
-  & > :not(:first-child) {
-    display: none;
-  }
-  & .next {
-    position: absolute;
-    right: 3%;
-    top: 45%;
-  }
-}
-
-#bitcoin:target {
-
 }
 
 @include phone {
   .carousel .card {
     max-width: 100%;
+  }
+};
+
+@include desktop {
+  .carousel .card {
+    width: 30%;
+    @include transition(all 0.5s ease);
+    &:hover {
+      opacity: 1;
+      @include transition(all 0.5s ease);
+      width: 35%;
+    }
+    &:not(:hover) {
+      @include transition(all 0.5s ease);
+      opacity: 0.5;
+      width: 25%;
+    }
   }
 };

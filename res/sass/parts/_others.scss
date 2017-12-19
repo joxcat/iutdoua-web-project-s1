@@ -2,15 +2,14 @@
 #return-to-top {
 	padding: 0.5em;
 	background-color: $primary;
-	opacity: 0.5;
+	opacity: 0.25;
 	border-radius: 50%;
-	position: absolute;
+	position: fixed;
 	right: 2rem;
 	bottom: 2rem;
 	z-index: 25;
 	color: $light;
 	@include transition(all 0.5s ease);
-	&:hover { opacity: 0.75; @include transition(all 0.5s ease); }
 }
 
 /* Searchbar ideo and lot of code from https://codepen.io/912lab/pen/LsplC */
@@ -59,3 +58,7 @@
   width: 2rem;
   height: 1rem;
 }
+
+@include desktop {
+	#return-to-top:hover { opacity: 0.75; @include transition(all 0.5s ease); }
+};
