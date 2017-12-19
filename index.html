@@ -3,10 +3,6 @@ repo: https://github.com/Blackksoulls/iutdoua-web-project-s1/
 
 Dev with love, music, php -S localhost:80 and sass -^-watch sass:css
 Copyright (c) 2017 Johan Planchon.
-
-carousel ? https://codepen.io/joshhunt/pen/LVQZRa
-http://benschwarz.github.io/gallery-css/#item-3s
-
 -->
 <!DOCTYPE html>
 <html>
@@ -29,7 +25,7 @@ http://benschwarz.github.io/gallery-css/#item-3s
     <link rel="stylesheet" href="res/css/fontawesome_custom_CSS3_valid.css" /> <!-- Fontawesome icons workaround to be valid CSS3 : fontawesome.io -->
   </head>
   <body lang="fr">
-    <a id="QR" href="#">
+    <a class="pop" id="QR" href="#">
       <div class="modal">
         <p>
           Scannez ce QR code pour arriver ici !
@@ -37,13 +33,20 @@ http://benschwarz.github.io/gallery-css/#item-3s
         <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/"/>
       </div>
     </a>
+    <a class="pop" id="account" href="#">
+      <div class="modal">
+        <p>
+          La partie "Compte" n'a pas encore été faite !
+        </p>
+      </div>
+    </a>
     <header>
       <nav id="menu"> <!-- Menu adapted from https://codepen.io/markmurray/pen/yyNZpz -->
         <ul>
           <li>
-            <a href="/categories">
-              <i class="fa fa-eercast"></i>
-              <p>Cat&eacute;gories</p>
+            <a href="/">
+              <i class="fa fa-home"></i>
+              <p>Acceuil</p>
             </a>
           </li>
           <li>
@@ -65,7 +68,7 @@ http://benschwarz.github.io/gallery-css/#item-3s
             </a>
           </li>
           <li>
-            <a href="/account">
+            <a href="#account">
               <i class="fa fa-user"></i>
               <p>Compte</p>
             </a>
@@ -100,20 +103,20 @@ http://benschwarz.github.io/gallery-css/#item-3s
           <div class="carousel">
             <div id="unicorn" class="card">
               <a href="/article/licorne.html"><h3>Vrai licorne</h3>
-              <img alt="real licorne" src="http://via.placeholder.com/240x144" /></a>
-              <p class="price">9000&euro;</p>
+              <img alt="real licorne" src="res/pictures/unicorn.png" /></a>
+              <p>1&euro; <span>-100%</span><span class="initial">6664269&euro;</span></p>
               <p class="description">Licorne r&eacute;elle en état de fonctionnement.</p>
             </div>
             <div id="bitcoin" class="card">
               <a href="/article/bitcoin.html"><h3>1er Bitcoin</h3>
-              <img alt="chocolate bitcoin" src="http://via.placeholder.com/240x144" /></a>
-              <p class="price">3.50&euro;</p>
+              <img alt="chocolate bitcoin" src="res/pictures/btc.png" /></a>
+              <p>3.50&euro; <span>-20%</span><span class="initial">4.2&euro;</span></p>
               <p class="description">Le premier Bitcoin en or massif au monde, article unique.</p>
             </div>
             <div id="elves" class="card">
-              <a href="/article/licorne.html"><h3>Brochette de lutins</h3>
-              <img alt="elves killed with brutality on a spear" src="http://via.placeholder.com/240x144" /></a>
-              <p>9000&euro;</p>
+              <a href="/article/elves.html"><h3>Brochette de lutins</h3>
+              <img alt="elves killed with brutality on a spear" src="res/pictures/lutins.png" /></a>
+              <p>9000&euro; <span>-90%</span><span class="initial">90000&euro;</span></p>
               <p>Brochette de lutins heureux pour vos f&ecirc;tes de No&euml;l.</p>
             </div>
           </div>

@@ -14,21 +14,20 @@
 
 /* Searchbar ideo and lot of code from https://codepen.io/912lab/pen/LsplC */
 #main form {
-	float: right;
+	float: left;
+	left: 5rem;
 	z-index: 20;
 	position: relative;
 
 	& input {
-		height: 1rem;
+		height: 2rem;
+		width: 2rem;
 		outline: none;
-		-webkit-appearance: textfield;
-		-webkit-box-sizing: content-box;
 		font-size: 100%;
 		background: #ededed url(../pictures/search.svg) no-repeat 0.5rem center;
 		background-size: 1rem;
 		border: solid 1px #ccc;
 		padding: 0.5rem 0.5rem 0.5rem 0.6rem;
-		width: 1rem;
 		color: transparent;
 		cursor: pointer;
 
@@ -36,8 +35,6 @@
 
 		@include transition(all 0.5s);
 
-		&::-webkit-search-decoration,
-		&::-webkit-search-cancel-button { display: none; }
 		&:hover { background-color: #fff; }
 		&:focus {
 			width: 16rem;

@@ -26,15 +26,15 @@ $desktop-width: 1024px;
 }
 
 @mixin keyframes($name) {
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
-  @-moz-keyframes #{$name} {
-    @content;
-  }
-  @-o-keyframes #{$name} {
-    @content;
-  }
+  // @-webkit-keyframes #{$name} {
+  //   @content;
+  // }
+  // @-moz-keyframes #{$name} {
+  //   @content;
+  // }
+  // @-o-keyframes #{$name} {
+  //   @content;
+  // }
   @keyframes #{$name} {
     @content;
   }
@@ -57,42 +57,42 @@ $desktop-width: 1024px;
 }
 
 @mixin box-sizing($box-model) {
-  -webkit-box-sizing: $box-model;
-  -moz-box-sizing: $box-model;
+  // -webkit-box-sizing: $box-model;
+  // -moz-box-sizing: $box-model;
   box-sizing: $box-model;
 }
 
 @mixin box-shadow($shadow...) {
-  -webkit-box-shadow: $shadow;
-  -moz-box-shadow: $shadow;
+  // -webkit-box-shadow: $shadow;
+  // -moz-box-shadow: $shadow;
   box-shadow: $shadow;
 }
 
 @mixin border-radius($rad) {
-  -webkit-border-radius: $rad;
-  -moz-border-radius: $rad;
+  // -webkit-border-radius: $rad;
+  // -moz-border-radius: $rad;
   border-radius: $rad;
 }
 
 @mixin transition($transition...) {
-    -moz-transition: $transition;
-    -o-transition: $transition;
-    -webkit-transition: $transition;
+    // -moz-transition: $transition;
+    // -o-transition: $transition;
+    // -webkit-transition: $transition;
     transition: $transition;
 }
 
 @mixin transform($transforms) {
-	-moz-transform: $transforms;
-	-o-transform: $transforms;
-	-ms-transform: $transforms;
-	-webkit-transform: $transforms;
+	// -moz-transform: $transforms;
+	// -o-transform: $transforms;
+	// -ms-transform: $transforms;
+	// -webkit-transform: $transforms;
   transform: $transforms;
 }
 
 @mixin animation($anim...) {
-  -webkit-animation: $anim; /* Safari 4+ */
-  -moz-animation: $anim; /* Fx 5+ */
-  -o-animation: $anim; /* Opera 12+ */
+  // -webkit-animation: $anim; /* Safari 4+ */
+  // -moz-animation: $anim; /* Fx 5+ */
+  // -o-animation: $anim; /* Opera 12+ */
   animation: $anim; /* IE 10+, Fx 29+ */
 }
 

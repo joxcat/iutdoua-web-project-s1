@@ -1,4 +1,4 @@
-#QR {
+.pop {
   z-index: 9000;
   position: fixed;
   top: 0;
@@ -39,10 +39,15 @@
 }
 
 @include phone {
-  #QR .modal {
+  .pop .modal {
     width: 100%;
     & p {
       font-size: 5vmin;
     }
   }
 };
+
+#account p {
+  text-align: center;
+  width: 100%;
+}
