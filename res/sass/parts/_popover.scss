@@ -22,9 +22,8 @@
     @include gbox_shadow(3);
     & p {
       font-size: 3vmin;
-      margin: auto 0;
       float: left;
-      width: 50%;
+      width: 100%;
     }
     & img {
       @include gbox_shadow(1);
@@ -47,7 +46,6 @@
   }
 };
 
-#account p {
-  text-align: center;
-  width: 100%;
+#QR p {
+  width: 50%;
 }

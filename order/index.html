@@ -11,7 +11,7 @@ Copyright (c) 2017 Johan Planchon.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Johan Planchon" />
     <meta name="description" content="Projet : maquette de site marchand" />
-    <title>KMarket</title>
+    <title>KMarket - Commande</title>
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/res/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/res/favicons/favicon-32x32.png">
@@ -25,12 +25,26 @@ Copyright (c) 2017 Johan Planchon.
     <link rel="stylesheet" href="res/css/fontawesome_custom_CSS3_valid.css" /> <!-- Fontawesome icons workaround to be valid CSS3 : fontawesome.io -->
   </head>
   <body lang="fr">
-    <a id="QR" href="#">
+    <a class="pop" id="QR" href="#">
       <div class="modal">
         <p>
           Scannez ce QR code pour arriver ici !
         </p>
         <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/order"/>
+      </div>
+    </a>
+    <a class="pop" id="account" href="#">
+      <div class="modal">
+        <p>
+          La partie "Compte" n'a pas encore &eacute;t&eacute; faite !
+        </p>
+      </div>
+    </a>
+    <a class="pop" id="search" href="#">
+      <div class="modal">
+        <p>
+          La partie "R&eacute;sultats de recherche" est optionnelle en mon&ocirc;me.
+        </p>
       </div>
     </a>
     <header>
@@ -61,7 +75,7 @@ Copyright (c) 2017 Johan Planchon.
             </a>
           </li>
           <li>
-            <a href="/account">
+            <a href="#account">
               <i class="fa fa-user"></i>
               <p>Compte</p>
             </a>
@@ -77,7 +91,7 @@ Copyright (c) 2017 Johan Planchon.
     <div id="main">
       <a id="work" class="fa fa-bars fa-2x" href="#main"></a>
       <a id="disabled" class="fa fa-bars fa-2x"></a>
-      <form action="/search">
+      <form id="searchit" action="#search">
         <input name="query" type="search" />
       </form>
       <a href="#top" id="return-to-top"><i class="fa fa-chevron-up fa-2x"></i></a>
@@ -85,15 +99,65 @@ Copyright (c) 2017 Johan Planchon.
         <section id="recap">
           <h2>R&eacute;capitulatif</h2>
           <ul>
-            <li><a href="/article/elves.html"><img alt="elves killed with brutality on a spear" src="/res/pictures/lutins.png" />Brochette de lutins</a><span>21000&euro;</span><span>Quantit&eacute;: 3x</span><a href="#delete">Supprimer</a></li>
-            <li><a href="/"><img alt="IDK what it is but I'm just sure it's not a bug I swear" src="https://via.placeholder.com/240x144" />Nouvel article.txt</a><span>0&euro;</span><span>Quantit&eacute;: 25565x</span><a href="#delete">Supprimer</a></li>
+            <li>
+              <a href="/article/elves.html">
+                <h3>Brochette de lutins</h3>
+                <img alt="elves killed with brutality on a spear" src="/res/pictures/lutins.png" />
+              </a><span>21000&euro;/Unit&eacute;</span><span>Quantit&eacute;: 3x</span><a href="#delete?q=brochette+de+lutins">Supprimer</a></li>
+            <li>
+              <a href="/">
+                <h3>Nouvel article.txt</h3>
+                <img alt="IDK what it is but I'm just sure it's not a bug I swear" src="https://via.placeholder.com/240x135" />
+              </a>
+              <span>0&euro;/Unit&eacute;</span><span>Quantit&eacute;: 25565x</span><a href="#delete?q=nouvel+article.txt">Supprimer</a>
+            </li>
           </ul>
+          <div>Total: 63000&euro;</div>
         </section>
-        <section id="promos">
-          <h2>Promos</h2>
-          <form>
-          <h3>Adresse</h3>
-          <h3>Informations de paiement</h3>
+        <section id="commande">
+          <h2>Commande</h2>
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Adresse compl&egrave;te</legend>
+              <p>Adresse ligne 1</p>
+              <input name="addr1" type="text" maxlength="64" placeholder="Adresse ligne 1" required/>
+              <p>Adresse ligne 2</p>
+              <input name="addr2" type="text" maxlength="64" placeholder="Adresse ligne 2"/>
+              <p>Ville</p>
+              <input name="town" type="text" maxlength="32" placeholder="Ville" required/>
+              <p>R&eacute;gion</p>
+              <select name="state">
+                <option value="default">--Choisir une R&eacute;gion--</option>
+                <option value="BFC">Bourgogne-Franche-Comt&eacute;</option>
+                <option value="NA">Nouvelle-Aquitaine</option>
+                <option value="norm">Normandie</option>
+                <option value="BRE">&Icirc;le de France</option>
+                <option value="GE">Grand Est</option>
+                <option value="Occ">Occitanie</option>
+                <option value="HdF">Hauts-de-France</option>
+                <option value="ARA">Auvergne-Rhône-Alpes</option>
+                <option value="BRE">Bretagne</option>
+                <option value="PL">Pays de la Loire</option>
+                <option value="PA">Bretagne</option>
+                <option value="DT">DOM-TOM</option>
+              </select>
+              <p>Code postal</p>
+              <input name="cdp" type="text" size="5" pattern="[0-9]{5}" placeholder="73000" required/>
+              <p>Num&eacute;ro de t&eacute;l&eacute;phone</p>
+              <input name="tel" type="tel" placeholder="0611666342" required/>
+            </fieldset>
+            <fieldset>
+              <legend>Informations de paiement</legend>
+              <p>Nom titulaire de la carte</p>
+              <input name="namecb" maxlength="32" type="text" placeholder="Sample Elpmas" required/>
+              <p>Num&eacute;ro de la carte</p>
+              <input name="numcb" type="text" size="16" pattern="[0-9]{16}" placeholder="4970XXXXXXXXXXXX" required/>
+              <p>Date expiration</p>
+              <input name="dtexpi" type="text" size="5" pattern="[0-9]{2}\/[0-9]{2}" placeholder="01/20" required/>
+              <p>CCV</p>
+              <input name="ccv" type="text" size="3" pattern="[0-9]{3}" placeholder="000" required/>
+            </fieldset>
+            <input name="submit" type="submit" value="Envoyer"/>
           </form>
         </section>
       </div>
@@ -101,8 +165,8 @@ Copyright (c) 2017 Johan Planchon.
     <footer>
       <span>Copyright &copy; <a href="https://git.kuro.ml/" target="_blank">Johan Planchon</a> 2017</span>
       <span><a href="/about">Sources</a></span>
-      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarket.kuro.ml%2F&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
-      <span><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarket.kuro.ml%2F" target="_blank">HTML Valide !</a></span>
+      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarket.kuro.ml%2Forder%2F&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
+      <span><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarket.kuro.ml%2Forder%2F" target="_blank">HTML Valide !</a></span>
     </footer>
   </body>
 </html>

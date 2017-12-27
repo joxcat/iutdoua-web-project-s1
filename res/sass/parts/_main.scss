@@ -34,7 +34,8 @@
         margin: 0 0.5em;
         padding: 0.5em 0.5em 0.5em 0.6em;
         &:first-of-type {
-          border-bottom: 1px solid $dark;
+          display: inline-block;
+          border-bottom: 0.05rem solid $dark;
         }
       }
     }
@@ -44,17 +45,31 @@
 @include phone {
   #main {
     padding: 0;
-    & #work { margin: 1rem 0 0 1rem; }
-    & #disabled { top: 1rem; margin-left: 1rem; }
-    & form { margin: 1rem 1rem 0 0; }
-    &:target #wrap {
-      top: 2rem;
+    & #work {
+      margin: 1rem 0 0 2rem;
+      float: left;
+      z-index: 2;
+    }
+    & #disabled {
+      margin: 1rem 0 0 2rem;
+      float: left;
+      z-index: 2;
+    }
+    & > form {
+      margin: 1rem 2rem 0 0;
+      float: right !important;
+      left: 0 !important;
     }
     & #wrap {
+      top: 4rem;
+      bottom: 10rem;
       max-width: 100%;
       width: 100vw;
       text-align: justify;
     }
+  }
+  nav {
+    left: 0;
   }
 };
 

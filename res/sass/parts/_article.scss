@@ -1,0 +1,191 @@
+.a_wrap {
+  margin-top: 1em;
+  & > div {
+    &:first-of-type {
+      & img {
+        border: 0.2em solid $light;
+        @include gbox-shadow(2);
+        width:75%;
+      }
+      & #price {
+        display: inline-block;
+        width: 30%;
+        & span {
+          position: relative;
+          top: -0.2rem;
+          color: $links;
+          font-weight: bold;
+          font-size: 0.75em;
+        }
+      }
+      & #oriprice {
+        display: inline-block;
+        width: 45%;
+        text-align: right;
+        & span {
+          text-decoration: line-through;
+        }
+      }
+      & h3 {
+        margin: 1.5rem 0 0.5rem 0;
+        &::before {
+          content: "##";
+          color: $primary;
+          margin-right: 0.2rem;
+        }
+      }
+      & table {
+        background-color: $dark;
+        border-radius: 0.3rem;
+        @include gbox-shadow(2);
+        & th, td {
+          padding: 0.3rem;
+        }
+        & th {
+          text-align: left;
+          background-color: lighten($dark, 15%);
+        }
+        & td {
+          text-align: right;
+          background-color: lighten($dark, 30%);
+          & span {
+            color: #D500F9;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      width: 35%;
+      background-color: $dark;
+      border-radius: 0.3rem;
+      @include gbox-shadow(2);
+      margin-bottom: 1rem;
+      & ul {
+        padding: 0.5em 0.5em 0 0.5em;
+        overflow-y: auto;
+        list-style: none;
+        height: 30rem;
+        & li {
+          background-color: $light;
+          color: $dark;
+          margin: 0 0 0.5em 0;
+          border-radius: 0.2rem;
+          @include gbox-shadow(2);
+          padding: 0.25rem;
+          & span {
+            padding-left: 0.5rem;
+            margin-bottom: 0.25rem;
+            display: block;
+            font-weight: bold;
+            border-bottom: 0.1rem solid $primary;
+            border-radius: 0.2rem 0.2rem 0 0;
+          }
+        }
+      }
+      & form {
+        background-color: $light;
+        border-radius: 0 0 0.3rem 0.3rem;
+        & input:first-of-type, textarea {
+          border: none;
+          padding: 0.1em 0.3em;
+          opacity: 0.5;
+          outline: none;
+          @include transition(opacity 0.5s ease);
+          &:focus {
+            opacity: 1;
+            @include transition(opacity 0.5s ease);
+          }
+        }
+        & input {
+          margin: 0.5em 0;
+          &:first-of-type {
+            width: 70%;
+            margin-left: 2.5%;
+            margin-right: 4%;
+            border-left: 0.3rem solid $primary;
+            background-color: rgba($primary, 0.25);
+          }
+          &:last-of-type {
+            width: 20%;
+            margin: 0.25em 40% 0.5em 40%;
+            border-radius: 0.2rem;
+            border-style: inset;
+            @include transition(opacity 0.5s ease);
+            opacity: 0.75;
+            &:hover, &:focus {
+              outline: none;
+              @include transition(opacity 0.5s ease);
+              opacity: 1;
+            }
+          }
+        }
+        & textarea {
+          outline: none;
+          overflow-x: hidden;
+          resize: none;
+          width: 95%;
+          height: 6em;
+          margin-left: 2.5%;
+          border-left: 0.3rem solid $links;
+          background-color: rgba($links, 0.25);
+        }
+      }
+    }
+  }
+}
+
+@include phone {
+  .workaround-main-article { margin-top: -1rem !important; }
+  #main:target.workaround-main-article { margin-top: 11rem !important; }
+  .a_wrap > div {
+    &:first-of-type {
+      margin-bottom: 2em;
+      & img {
+        width: 100%;
+      }
+      & #price, #oriprice {
+        width: 100%;
+        text-align: left;
+      }
+    }
+    &:last-of-type {
+      width: 100%;
+    }
+  }
+};
+
+@media (min-width: 768px) {
+  .a_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    & > div {
+      margin: 0 2.5%;
+      width: 45%;
+    }
+  }
+}
+
+.stars {
+  &::after {
+    margin-left: 0.5rem;
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #FFD600;
+  }
+  &.st-5::after {
+    content: "\f005\f005\f005\f005\f005";
+  }
+  &.st-4::after {
+    content: "\f005\f005\f005\f005";
+  }
+  &.st-3::after {
+    content: "\f005\f005\f005";
+  }
+  &.st-2::after {
+    content: "\f005\f005";
+  }
+  &.st-1::after {
+    content: "\f005";
+  }
+}

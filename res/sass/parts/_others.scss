@@ -13,9 +13,8 @@
 }
 
 /* Searchbar ideo and lot of code from https://codepen.io/912lab/pen/LsplC */
-#main form {
-	float: left;
-	left: 5rem;
+#main #searchit {
+	float: right;
 	z-index: 20;
 	position: relative;
 
@@ -55,6 +54,14 @@
   width: 2rem;
   height: 1rem;
 }
+
+@include phone {
+	#main #searchit input {
+		width: 16rem;
+		max-width: 50vw;
+		padding-left: 2rem;
+	}
+};
 
 @include desktop {
 	#return-to-top:hover { opacity: 0.75; @include transition(all 0.5s ease); }

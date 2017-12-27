@@ -53,11 +53,11 @@ nav {
       text-align: center;
       cursor: pointer;
       &:hover { opacity: 0.75; @include transition(all 0.3s ease); }
-      &:nth-child(1) i { @include iconize($light, #448AFF, #82B1FF); }
-      &:nth-child(2) i { @include iconize($light, #FF5722, #FF9E80); }*
-      &:nth-child(4) i { @include iconize($light, #01579B, #0277BD); }
-      &:nth-child(5) i { @include iconize($dark, #FFEB3B, #FFF59D); }
-      &:nth-child(6) i { @include iconize($light, #303F9F, rgba(0,0,0,0)); }
+      &:nth-child(1) i { @include iconize($light, #448AFF); }
+      &:nth-child(2) i { @include iconize($light, #FF5722); }*
+      &:nth-child(4) i { @include iconize($light, #01579B); }
+      &:nth-child(5) i { @include iconize($dark, #FFEB3B); }
+      &:nth-child(6) i { @include iconize($light, #303F9F); }
 
       i {
         font-size: 1.5em;
@@ -69,7 +69,6 @@ nav {
         color: #000;
         display: inline-block;
         overflow: hidden;
-        @include longshadow(#999);
       }
 
       a {

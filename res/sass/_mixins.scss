@@ -1,10 +1,9 @@
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
-@mixin iconize($color, $circle, $shadow) {
+@mixin iconize($color, $circle) {
   color: $color;
   background-color: $circle;
-  @include longshadow($shadow);
 }
 
 @mixin phone {
@@ -81,7 +80,7 @@ $desktop-width: 1024px;
     transition: $transition;
 }
 
-@mixin transform($transforms) {
+@mixin transform($transforms...) {
 	// -moz-transform: $transforms;
 	// -o-transform: $transforms;
 	// -ms-transform: $transforms;
@@ -90,30 +89,11 @@ $desktop-width: 1024px;
 }
 
 @mixin animation($anim...) {
-  // -webkit-animation: $anim; /* Safari 4+ */
-  // -moz-animation: $anim; /* Fx 5+ */
-  // -o-animation: $anim; /* Opera 12+ */
-  animation: $anim; /* IE 10+, Fx 29+ */
+  // -webkit-animation: $anim;
+  // -moz-animation: $anim;
+  // -o-animation: $anim;
+  animation: $anim;
 }
-
-// from https://codepen.io/markmurray/pen/yyNZpz
-@function makelongshadow($color) {
-  $val: 0px 0px $color;
-  @for $i from 1 through $shadowlength {
-    $val: #{$val}, #{$i}px #{$i}px #{$color};
-  }
-  @return $val;
-}
-
-@mixin longshadow($color) {
-  text-shadow: makelongshadow($color);
-}
-
-// old not used for the moment
-// @mixin hexRGBA($color, $opacity: 0.3) {
-//     background: $color; // fallback if rgba one params doesn't work
-//     background: rgba($color, $opacity);
-// }
 
 // mixin from https://gist.github.com/paulmelnikow/7fcfbe4f68e5df7fe326
 @mixin gbox_shadow ($level) {

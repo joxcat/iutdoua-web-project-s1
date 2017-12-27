@@ -28,7 +28,8 @@ footer {
 
 @include phone {
   footer {
-    padding: 3em 0;
+    top: 4rem;
+    position: relative;
     & span {
       margin: 0.75em;
     }

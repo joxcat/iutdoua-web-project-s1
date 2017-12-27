@@ -1,0 +1,149 @@
+<!--
+repo: https://github.com/Blackksoulls/iutdoua-web-project-s1/
+
+Dev with love, music, php -S localhost:80 and sass -^-watch sass:css
+Copyright (c) 2017 Johan Planchon.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Johan Planchon" />
+    <meta name="description" content="Projet : maquette de site marchand" />
+    <title>KMarket - A propos</title>
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/res/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/res/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/res/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/res/favicons/manifest.json">
+    <link rel="shortcut icon" href="/res/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/res/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#448aff">
+    <!-- css -->
+    <link rel="stylesheet" href="res/css/main.css" />
+    <link rel="stylesheet" href="res/css/fontawesome_custom_CSS3_valid.css" /> <!-- Fontawesome icons workaround to be valid CSS3 : http://fontawesome.io -->
+  </head>
+  <body lang="fr">
+    <a class="pop" id="QR" href="#">
+      <div class="modal">
+        <p>
+          Scannez ce QR code pour arriver ici !
+        </p>
+        <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/about"/>
+      </div>
+    </a>
+    <a class="pop" id="account" href="#">
+      <div class="modal">
+        <p>
+          La partie "Compte" n'a pas encore &eacute;t&eacute; faite !
+        </p>
+      </div>
+    </a>
+    <a class="pop" id="search" href="#">
+      <div class="modal">
+        <p>
+          La partie "R&eacute;sultats de recherche" est optionnelle en mon&ocirc;me.
+        </p>
+      </div>
+    </a>
+    <header>
+      <nav id="menu"> <!-- Menu adapted from https://codepen.io/markmurray/pen/yyNZpz -->
+        <ul>
+          <li>
+            <a href="/">
+              <i class="fa fa-home"></i>
+              <p>Acceuil</p>
+            </a>
+          </li>
+          <li>
+            <a href="#QR">
+              <i class="fa fa-qrcode"></i>
+              <p>QR code</p>
+            </a>
+          </li>
+          <li>
+            <a href="/about">
+              <i class="fa fa-vcard"></i>
+              <p>A propos</p>
+            </a>
+          </li>
+          <li>
+            <a href="/order">
+              <i class="fa fa-shopping-cart"></i>
+              <p>Panier</p>
+            </a>
+          </li>
+          <li>
+            <a href="#account">
+              <i class="fa fa-user"></i>
+              <p>Compte</p>
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-times"></i>
+              <p>Fermer</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main">
+      <a id="work" class="fa fa-bars fa-2x" href="#main"></a>
+      <a id="disabled" class="fa fa-bars fa-2x"></a>
+      <form id="searchit" action="/#search">
+        <input name="query" type="search" />
+      </form>
+      <a href="#top" id="return-to-top"><i class="fa fa-chevron-up fa-2x"></i></a>
+      <div id="wrap">
+        <section id="about">
+          <h2>Qui sommes-nous ?</h2>
+          <p>
+            Nous sommes une jeune entreprise cr&eacute;e en 2017 de vente de particulier &agrave; particulier. Notre si&egrave;ge social est situ&eacute; &agrave; Hong-Kong et nous nous occupons de la mise en relation des particuliers, de la mise en avant des produits, et de la s&eacute;curit&eacute; des transactions. Nous taxons (tr&egrave;s faiblement chaque ventes <span class="notvisible">seulement 20%</span>)
+          </p>
+          <p>
+            Nous d&eacute;clinons toute responsabilit&eacute;s sur des produits vendus ill&eacute;gallements, des produits vendus &agrave; des prix abusifs, ou encore sur les &eacute;ventuelles taxes douani&egrave;res &agrave; la r&eacute;c&eacute;ption. <span class="notvisible">Cordialement la direction...</span>
+          </p>
+        </section>
+        <section id="sources">
+          <h2>Sources</h2>
+          <ul>
+            <li>Icones : <a href="http://fontawesome.io/">Fontawesome</a></li>
+            <li>Menu : <a href="https://codepen.io/markmurray/pen/yyNZpz">Off canvas menu (Codepen)</a></li>
+            <li>Barre de recherche : <a href="https://codepen.io/912lab/pen/LsplC">Expandable Search Form (Codepen)</a></li>
+            <li>Ombres : <a href="https://gist.github.com/paulmelnikow/7fcfbe4f68e5df7fe326">Google Material Design Shadow (Gist)</a></li>
+          </ul>
+        </section>
+        <section id="corr">
+          <h2>Correspondance des pages</h2>
+          <table>
+            <tr>
+              <th>Page de garde</th><td><a href="https://market.kuro.ml/">KMarket</a></td>
+            </tr>
+            <tr>
+              <th>Page article 1</th><td><a href="https://market.kuro.ml/article/licorne.html">Vrai licorne</a></td>
+            </tr>
+            <tr>
+              <th>Page article 2</th><td><a href="https://market.kuro.ml/article/bitcoin.html">Premier bitcoin</a></td>
+            </tr>
+            <tr>
+              <th>Page article 3</th><td><a href="https://market.kuro.ml/article/lutins.html">Brochette de lutins</a></td>
+            </tr>
+            <tr>
+              <th>Page validation de commande</th><td><a href="https://market.kuro.ml/order">Commande</a></td>
+            </tr>
+            <tr>
+              <th>Qui sommes-nous ?</th><td><a href="https://market.kuro.ml/about">A propos</a></td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <span>Copyright &copy; <a href="https://git.kuro.ml/" target="_blank">Johan Planchon</a> 2017</span>
+      <span><a href="/about">Sources</a></span>
+      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarket.kuro.ml%2Fabout%2F&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
+      <span><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarket.kuro.ml%2Fabout%2F" target="_blank">HTML Valide !</a></span>
+    </footer>
+  </body>
+</html>

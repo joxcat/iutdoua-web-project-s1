@@ -1,0 +1,127 @@
+#recap {
+  ul {
+    list-style: none;
+    & li {
+      & a {
+        text-decoration: none;
+        & h3 {
+          position: relative;
+          left: -1em;
+          &::before {
+            content: ">";
+            color: $primary;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-right: 0.3em;
+          }
+        }
+        & img {
+          height: 8rem;
+        }
+        &:last-of-type {
+          position: relative;
+          float: right;
+          top: 3rem;
+          right: 3rem;
+          &:hover {
+            color: darken($links, 20%);
+            font-size: 1.3em;
+            @include transition(all 0.5s ease);
+          }
+        }
+      }
+      & span {
+        position: relative;
+        bottom: 4rem;
+        font-size: 1.2rem;
+        margin: 0 0 0 1em;
+        &:last-of-type {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  & div {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: darken($links, 20%);
+  }
+}
+
+#commande form {
+  margin: 0;
+  float: none !important;
+  & p {
+    color: darken($light, 5%);
+    &::before {
+      content: ">";
+      color: $primary;
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-right: 0.3em;
+    }
+  }
+  & input:not([name="submit"]), select {
+    padding-left: 0.5em;
+    background-color: lighten($dark, 40%);
+    color: lighten($dark, 15%);
+    border: 0.1rem solid $light;
+    @include transition(all 0.5s ease);
+    @include gbox-shadow(1);
+    &:focus {
+      background-color: $light;
+      @include transition(all 0.5s ease);
+    }
+  }
+  & input[name="submit"] {
+    display: block;
+    margin: 0.5rem auto;
+    @include transition(all 0.5s ease);
+    @include gbox-shadow(1);
+    &:hover {
+      opacity: 0.80;
+      @include transition(all 0.5s ease);
+    }
+  }
+}
+
+@include desktop {
+  #commande form {
+    display: flex;
+    flex-flow: row wrap;
+    & fieldset {
+      width: 45%;
+      margin: 0 2.5%;
+    }
+    & input[name="submit"] {
+      font-size: 1.3em;
+    }
+  }
+};
+
+@include phone {
+  #recap ul {
+    margin-bottom: 0.75em;
+    & li {
+      & a:last-of-type {
+        top: -11.3rem;
+        right: 1rem;
+        font-size: 0.80em;
+      }
+      & span {
+        position: relative;
+        top: 0;
+        margin: 0;
+        font-size: 1em;
+        &:last-of-type {
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+  #main section:first-of-type h2 {
+    position: absolute;
+  }
+}
