@@ -1,6 +1,5 @@
 # Projet web S1 IUT Info Doua
 ###### iutdoua-web-project-s1
-**GH-PAGES is temporary the web root (during dev time)**
 http://liris.cnrs.fr/~pchampin/enseignement/intro-web/projet.html
 
 ## Sommaire
