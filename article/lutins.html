@@ -1,0 +1,184 @@
+<!--
+repo: https://github.com/Blackksoulls/iutdoua-web-project-s1/
+
+Dev with love, music, php -S localhost:80 and sass -^-watch sass:css
+Copyright (c) 2017 Johan Planchon.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Johan Planchon" />
+    <meta name="description" content="Projet : maquette de site marchand" />
+    <title>KMarket - Brochette de lutins</title>
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/res/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/res/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/res/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/res/favicons/manifest.json">
+    <link rel="shortcut icon" href="/res/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/res/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#448aff">
+    <!-- css -->
+    <link rel="stylesheet" href="/res/css/main.css" />
+    <link rel="stylesheet" href="/res/css/fontawesome_custom_CSS3_valid.css" /> <!-- Fontawesome icons workaround to be valid CSS3 : fontawesome.io -->
+  </head>
+  <body lang="fr">
+    <a class="pop" id="QR" href="#">
+      <div class="modal">
+        <p>
+          Scannez ce QR code pour arriver ici !
+        </p>
+        <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/article/lutins.html"/>
+      </div>
+    </a>
+    <a class="pop" id="account" href="#">
+      <div class="modal">
+        <p>
+          La partie "Compte" n'a pas encore &eacute;t&eacute; faite !
+        </p>
+      </div>
+    </a>
+    <a class="pop" id="search" href="#">
+      <div class="modal">
+        <p>
+          La partie "R&eacute;sultats de recherche" est optionnelle en mon&ocirc;me.
+        </p>
+      </div>
+    </a>
+    <header>
+      <nav id="menu"> <!-- Menu adapted from https://codepen.io/markmurray/pen/yyNZpz -->
+        <ul>
+          <li>
+            <a href="/">
+              <i class="fa fa-home"></i>
+              <p>Acceuil</p>
+            </a>
+          </li>
+          <li>
+            <a href="#QR">
+              <i class="fa fa-qrcode"></i>
+              <p>QR code</p>
+            </a>
+          </li>
+          <li>
+            <a href="/about">
+              <i class="fa fa-vcard"></i>
+              <p>A propos</p>
+            </a>
+          </li>
+          <li>
+            <a href="/order">
+              <i class="fa fa-shopping-cart"></i>
+              <p>Panier</p>
+            </a>
+          </li>
+          <li>
+            <a href="#account">
+              <i class="fa fa-user"></i>
+              <p>Compte</p>
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-times"></i>
+              <p>Fermer</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main" class="workaround-main-article">
+      <a id="work" class="fa fa-bars fa-2x" href="#main"></a>
+      <a id="disabled" class="fa fa-bars fa-2x"></a>
+      <form id="searchit" action="#search">
+        <input name="query" type="search" />
+      </form>
+      <a href="#top" id="return-to-top"><i class="fa fa-chevron-up fa-2x"></i></a>
+      <div id="wrap">
+        <section class="article">
+          <h2>Brochette de lutins</h2>
+          <div class="a_wrap">
+            <div>
+              <img alt="real licorne" src="/res/pictures/lutins.png" />
+              <p id="price">
+                Prix: 4500&euro; <span>-50%</span>
+              </p>
+              <p id="oriprice">
+                Prix originel: <span>9000&euro;</span>
+              </p>
+              <p id="desc">
+                <span class="intro">Brochette de lutins heureux pour vos f&ecirc;tes de No&euml;l.</span>Brochette aux go&ucirc;ts multiples, p&eacute;par&eacute;e par un grand chef poss&eacute;dant de multiples &eacute;toiles. Cette brochette r&eacute;specte toutes les r&egrave;gles de bon traitement des animaux. (aucun lutin de la Student Club n'a &eacute;t&eacute; martiris&eacute; pour cette brochette "I swear!")
+              </p>
+              <button name="addunicorn" value="1" formmethod="post">Ajouter au panier</button>
+              <h3>Caract&eacute;ristiques</h3>
+              <table>
+                <tr>
+                  <th>
+                    Halal
+                  </th>
+                  <td>
+                    oui
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Kasher
+                  </th>
+                  <td>
+                    oui
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Ingr&eacute;diants
+                  </th>
+                  <td>
+                    <span>Lutins</span>, tomates, poivrons, viande
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Poids
+                  </th>
+                  <td>
+                    300g
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Calories
+                  </th>
+                  <td>
+                    0
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <ul>
+                <li><span class="verified stars st-5">superIlan</span>Repas parfait pour les f&ecirc;tes, &agrave; toujours avoir au fond de son sac</li>
+                <li><span class="stars st-1">TROLlH4TErZ</span>D&eacute;cevant, description fausse, jamais arriv&eacute; je ne conseille vraiment pas cet article !</li>
+                <li><span class="verified stars st-3">4lL4hU 4k84r</span>Produit conforme &agrave; sa description. Re&ccedil;u dans les temps</li>
+                <li><span class="verified stars st-2">|-|17|_3R</span>Produit toujours pas arriv&eacute; les petits fours ont cram&eacute; entre temps !</li>
+                <li><span class="verified stars st-4">Rick</span>Go&ucirc;t inoubliable vous pouvez m'envoyer d'autres produits pour les essayer. (Produit re&ccedil;u en &eacute;change d'un avis objectif et complet)</li>
+                <li><span class="verified stars st-5">j0|-|4N|\|</span>PAS TOUCHE &Acirc; MES LUTINS !!! Sinon tr&egrave;s bon produit, je recommande.</li>
+              </ul>
+              <form id="comms" method="post">
+                <input name="pseudo" type="text" placeholder="Pseudo" required/>
+                <textarea name="comment" form="comms" wrap="soft" placeholder="Commentaire..." required></textarea>
+                <input name="valid" type="submit" value="Poster"/>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer>
+      <span>Copyright &copy; <a href="https://git.kuro.ml/" target="_blank">Johan Planchon</a> 2017</span>
+      <span><a href="/about">Sources</a></span>
+      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarket.kuro.ml%2Farticle%2Flutins.html&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
+      <span><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarket.kuro.ml%2Farticle%2Flutins.html" target="_blank">HTML Valide !</a></span>
+    </footer>
+  </body>
+</html>

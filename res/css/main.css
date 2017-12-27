@@ -487,6 +487,13 @@ footer {
 
   #main section:first-of-type h2 {
     position: absolute; } }
+#main #wrap .article {
+  padding-bottom: 1rem; }
+
+.verified {
+  font-weight: bold;
+  color: #ad231e; }
+
 .a_wrap {
   margin-top: 1em; }
   .a_wrap > div:first-of-type img {
@@ -529,17 +536,37 @@ footer {
       .a_wrap > div:first-of-type table td span {
         color: #D500F9;
         font-weight: bold; }
+  .a_wrap > div:first-of-type p:last-of-type {
+    margin-top: 0.5em;
+    text-align: justify; }
+    .a_wrap > div:first-of-type p:last-of-type .intro {
+      text-align: left;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 0.3em;
+      font-size: 1.1em; }
+  .a_wrap > div:first-of-type button {
+    background-color: #555;
+    color: #EFF0F1;
+    opacity: 0.75;
+    border-radius: 0.3rem;
+    margin: 0.5em 0;
+    font-size: 1.1em;
+    transition: opacity 0.5s ease; }
+    .a_wrap > div:first-of-type button:hover, .a_wrap > div:first-of-type button :focus {
+      opacity: 1;
+      transition: opacity 0.5s ease; }
   .a_wrap > div:last-of-type {
     width: 35%;
     background-color: #555;
     border-radius: 0.3rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
     .a_wrap > div:last-of-type ul {
       padding: 0.5em 0.5em 0 0.5em;
       overflow-y: auto;
       list-style: none;
-      height: 30rem; }
+      height: 33rem; }
       .a_wrap > div:last-of-type ul li {
         background-color: #EFF0F1;
         color: #555;
