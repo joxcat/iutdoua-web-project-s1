@@ -3,9 +3,19 @@
 http://liris.cnrs.fr/~pchampin/enseignement/intro-web/projet.html
 
 ## Sommaire
+- [Correspondance des pages](#correspondance-des-pages)
 - [Consignes](#consignes)
 - [A faire attention](#a-faire-attention)
 - [Sources](#sources)
+
+## Correspondance des pages
+- Page de garde -> [KMarket](https://market.kuro.ml/)
+- Page détaillée d'article -> 
+  - [Vrai licorne](https://market.kuro.ml/article/licorne.html)
+  - [Premier Bitcoin](https://market.kuro.ml/article/bitcoin.html)
+  - [Brochette de lutins](https://market.kuro.ml/article/lutins.html)
+- Page validation de commande -> [Commande](https://market.kuro.ml/order)
+- Page Qui sommes-nous ? -> [A propos](https://market.kuro.ml/about)
 
 ## Consignes
 L’objectif de votre projet est de produire, en binôme, une *maquette* de site marchand. Ce sera une maquette dans le sens où les fonctionnalités coté serveur (recherche, passage de commande) seront simulées.   
