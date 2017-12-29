@@ -39,7 +39,8 @@
 
 @media (max-width: #{$tablet-width - 1px}) {
   .pop .modal {
-    width: 100%;
+    width: 90%;
+    padding: 2em;
     & p {
       font-size: 5vmin;
     }

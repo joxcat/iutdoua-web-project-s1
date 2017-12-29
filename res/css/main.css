@@ -145,14 +145,14 @@ nav ul li p {
   }
 
   #main:target {
-    margin-top: 37vh;
+    margin-top: 30vh;
   }
 }
 /* core page */
 #main {
   margin-top: 0;
-  background: #EFF0F1;
   min-height: 90vh;
+  background: #EFF0F1;
   margin: 0 auto;
   transition: all 0.3s ease;
   z-index: 10;
@@ -197,6 +197,7 @@ nav ul li p {
 @media (max-width: 767px) {
   #main {
     padding: 0;
+    min-height: 0;
   }
   #main #work {
     margin: 1rem 0 0 2rem;
@@ -235,7 +236,8 @@ nav ul li p {
   }
 }
 footer {
-  z-index: 10;
+  bottom: 0;
+  z-index: 20;
   margin: 0;
   padding: 2em 0;
   min-height: 10vh;
@@ -311,7 +313,8 @@ footer span a:hover {
 
 @media (max-width: 767px) {
   .pop .modal {
-    width: 100%;
+    width: 90%;
+    padding: 2em;
   }
   .pop .modal p {
     font-size: 5vmin;
@@ -423,7 +426,7 @@ footer span a:hover {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
-  z-index: 25;
+  z-index: 250;
   color: #EFF0F1;
   transition: all 0.5s ease;
 }
@@ -886,6 +889,136 @@ footer span a:hover {
 #main #wrap #repository a:hover {
   color: #FFEA00;
   transition: color 0.5s ease;
+}
+#main #wrap #iut img {
+  width: 100%;
+}
+
+#results ul {
+  list-style: none;
+  padding: 0 0 0 1rem;
+}
+#results ul li {
+  opacity: 0.85;
+  transition: opacity 0.5s ease;
+  background-color: #555;
+  border-radius: 0.3rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  padding-bottom: 0.1rem;
+}
+#results ul li:hover {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+#results ul li a {
+  text-decoration: none;
+}
+#results ul li a img {
+  border: 0.2rem solid #EFF0F1;
+  width: 25%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+#results ul li a div {
+  margin-left: 1em;
+  width: 70%;
+  display: inline-block;
+  position: relative;
+  top: -3vw;
+}
+#results ul li a div h3, #results ul li a div p {
+  color: #EFF0F1;
+}
+#results ul li a div p:first-of-type {
+  color: #FFEA00;
+}
+#results ul li a div p:first-of-type span {
+  position: relative;
+  font-size: 0.75em;
+  top: -0.3em;
+  color: #EC9491;
+}
+
+@media (max-width: 767px) {
+  #results ul {
+    padding: 3rem 0 0 0;
+  }
+  #results ul li {
+    opacity: 1;
+  }
+  #results ul li a img {
+    width: 100%;
+  }
+  #results ul li a div {
+    display: relative;
+    top: 0;
+    width: 100%;
+    margin: 0;
+  }
+  #results ul li a div h3, #results ul li a div p:first-of-type {
+    display: inline-block;
+  }
+  #results ul li a div h3 {
+    margin-right: 1em;
+  }
+}
+/* Fontawesome icons workaround to be valid CSS3 : http://fontawesome.io
+* By Johan Planchon
+* only the icons that I need (fa-qrcode, fa-bars, fa-chevron-up, fa-home, fa-vcard, fa-shopping-cart, fa-user, fa-times)
+*/
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont_ie.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+/* private utf-8 user chars */
+.fa-qrcode:before {
+  content: "\f029";
+}
+
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+.fa-chevron-up:before {
+  content: "\f077";
+}
+
+.fa-home:before {
+  content: "\f015";
+}
+
+.fa-vcard:before {
+  content: "\f2bb";
+}
+
+.fa-shopping-cart:before {
+  content: "\f07a";
+}
+
+.fa-user:before {
+  content: "\f007";
+}
+
+.fa-times:before {
+  content: "\f00d";
 }
 
 /*# sourceMappingURL=main.css.map */

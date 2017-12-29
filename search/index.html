@@ -11,7 +11,7 @@ Copyright (c) 2017 Johan Planchon.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Johan Planchon" />
     <meta name="description" content="Projet : maquette de site marchand" />
-    <title>KMarket</title>
+    <title>KMarket - R&eacute;sultats de recherche</title>
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/res/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/res/favicons/favicon-32x32.png">
@@ -22,6 +22,7 @@ Copyright (c) 2017 Johan Planchon.
     <meta name="theme-color" content="#448aff">
     <!-- css -->
     <link rel="stylesheet" href="/res/css/main.css" />
+    <link rel="stylesheet" href="/res/css/fontawesome_custom_CSS3_valid.css" /> <!-- Fontawesome icons workaround to be valid CSS3 : http://fontawesome.io -->
   </head>
   <body lang="fr">
     <a class="pop" id="QR" href="#">
@@ -29,7 +30,7 @@ Copyright (c) 2017 Johan Planchon.
         <p>
           Scannez ce QR code pour arriver ici !
         </p>
-        <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=http://market.kuro.ml/"/>
+        <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=http://market.kuro.ml/search"/>
       </div>
     </a>
     <a class="pop" id="account" href="#">
@@ -88,45 +89,38 @@ Copyright (c) 2017 Johan Planchon.
       </form>
       <a href="#top" id="return-to-top"><i class="fa fa-chevron-up fa-2x"></i></a>
       <div id="wrap">
-        <section id="infos">
-          <h2>Bienvenue !</h2>
-          <p>
-            Bienvenue sur KMarket le web market qui vous permet d'acheter un peu de tout à des prix d&eacute;fiant toute concurrence.
-          </p>
-          <p>
-            <strong>C'est no&euml;l, profitez de promos sur l'ensemble du catalogue jusqu'au 25/12 minuit !</strong>
-          </p>
-        </section>
-        <section id="promos" class="dark last">
-          <h2>Promos</h2>
-          <div class="carousel">
-            <div id="unicorn" class="card">
-              <a href="/article/licorne.html"><h3>Vrai licorne</h3>
-              <img alt="real licorne" src="res/pictures/unicorn.png" /></a>
-              <p>1&euro; <span>-99.9%</span><span class="initial">6664269&euro;</span></p>
-              <p class="description">Licorne r&eacute;elle en état de fonctionnement.</p>
-            </div>
-            <div id="bitcoin" class="card">
-              <a href="/article/bitcoin.html"><h3>Premier Bitcoin</h3>
-              <img alt="chocolate bitcoin" src="res/pictures/btc.png" /></a>
-              <p>3.50&euro; <span>-20%</span><span class="initial">4.2&euro;</span></p>
-              <p class="description">Le premier Bitcoin en or massif au monde, article unique.</p>
-            </div>
-            <div id="elves" class="card">
-              <a href="/article/lutins.html"><h3>Brochette de lutins</h3>
-              <img alt="elves killed with brutality on a spear" src="res/pictures/lutins.png" /></a>
-              <p>4500&euro; <span>-50%</span><span class="initial">9000&euro;</span></p>
-              <p>Brochette de lutins heureux pour vos f&ecirc;tes de No&euml;l.</p>
-            </div>
-          </div>
+        <section id="results" class="last">
+          <h2>R&eacute;sultats de recherche</h2>
+          <ul>
+            <li>
+              <a href="/article/licorne.html">
+                <img alt="real licorne" src="res/pictures/unicorn.png" />
+                <div>
+                  <h3 class="name">Vrai licorne</h3>
+                  <p class="price">1&euro; <span>-99.9%</span></p>
+                  <p class="desc">Licorne r&eacute;elle en état de fonctionnement.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/article/bitcoin.html">
+                <img alt="chocolate bitcoin" src="res/pictures/btc.png" />
+                <div>
+                  <h3 class="name">Premier Bitcoin</h3>
+                  <p class="price">3.50&euro; <span>-20%</span></p>
+                  <p class="desc">Le premier Bitcoin en or massif au monde, article unique.</p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </section>
       </div>
     </div>
     <footer>
       <span>Copyright &copy; <a href="https://git.kuro.ml/" target="_blank">Johan Planchon</a> 2017</span>
       <span><a href="/about">Sources</a></span>
-      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fmarket.kuro.ml%2F&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
-      <span><a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fmarket.kuro.ml%2F" target="_blank">HTML Valide !</a></span>
+      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fmarket.kuro.ml%2Fsearch%2F&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
+      <span><a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fmarket.kuro.ml%2Fsearch%2F" target="_blank">HTML Valide !</a></span>
     </footer>
   </body>
 </html>

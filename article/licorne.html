@@ -22,7 +22,6 @@ Copyright (c) 2017 Johan Planchon.
     <meta name="theme-color" content="#448aff">
     <!-- css -->
     <link rel="stylesheet" href="/res/css/main.css" />
-    <link rel="stylesheet" href="/res/css/fontawesome_custom_CSS3_valid.css" /> <!-- Fontawesome icons workaround to be valid CSS3 : http://fontawesome.io -->
   </head>
   <body lang="fr">
     <a class="pop" id="QR" href="#">
@@ -30,20 +29,13 @@ Copyright (c) 2017 Johan Planchon.
         <p>
           Scannez ce QR code pour arriver ici !
         </p>
-        <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/article/licorne.html"/>
+        <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=http://market.kuro.ml/article/licorne.html"/>
       </div>
     </a>
     <a class="pop" id="account" href="#">
       <div class="modal">
         <p>
           La partie "Compte" n'a pas encore &eacute;t&eacute; faite !
-        </p>
-      </div>
-    </a>
-    <a class="pop" id="search" href="#">
-      <div class="modal">
-        <p>
-          La partie "R&eacute;sultats de recherche" est optionnelle en mon&ocirc;me.
         </p>
       </div>
     </a>
@@ -91,7 +83,7 @@ Copyright (c) 2017 Johan Planchon.
     <div id="main" class="workaround-main-article">
       <a id="work" class="fa fa-bars fa-2x" href="#main"></a>
       <a id="disabled" class="fa fa-bars fa-2x"></a>
-      <form id="searchit" action="#search">
+      <form id="searchit" action="/search">
         <input name="query" type="search" />
       </form>
       <a href="#top" id="return-to-top"><i class="fa fa-chevron-up fa-2x"></i></a>
@@ -174,8 +166,8 @@ Copyright (c) 2017 Johan Planchon.
     <footer>
       <span>Copyright &copy; <a href="https://git.kuro.ml/" target="_blank">Johan Planchon</a> 2017</span>
       <span><a href="/about">Sources</a></span>
-      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarket.kuro.ml%2Farticle%2Flicorne.html&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
-      <span><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarket.kuro.ml%2Farticle%2Flicorne.html" target="_blank">HTML Valide !</a></span>
+      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fmarket.kuro.ml%2Farticle%2Flicorne.html&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
+      <span><a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fmarket.kuro.ml%2Farticle%2Flicorne.html" target="_blank">HTML Valide !</a></span>
     </footer>
   </body>
 </html>
