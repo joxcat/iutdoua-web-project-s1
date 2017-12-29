@@ -1,0 +1,59 @@
+/* Fontawesome icons workaround to be valid CSS3 : http://fontawesome.io
+* By Johan Planchon
+* only the icons that I need (fa-qrcode, fa-bars, fa-chevron-up, fa-home, fa-vcard, fa-shopping-cart, fa-user, fa-times)
+*/
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('../fonts/fontawesome-webfont_ie.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+}
+
+.fa-2x {
+    font-size: 2em;
+}
+
+/* private utf-8 user chars */
+.fa-qrcode:before {
+    content: "\f029";
+}
+
+.fa-bars:before {
+    content: "\f0c9";
+}
+
+.fa-chevron-up:before {
+    content: "\f077";
+}
+
+.fa-home:before {
+    content: "\f015";
+}
+
+.fa-vcard:before {
+    content: "\f2bb";
+}
+
+.fa-shopping-cart:before {
+    content: "\f07a";
+}
+
+.fa-user:before {
+    content: "\f007";
+}
+
+.fa-times:before {
+    content: "\f00d";
+}

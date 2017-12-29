@@ -13,8 +13,8 @@
         text-decoration: none;
         transition: all 0.5s ease;
         &:hover {
-          border-bottom: 0.05rem dotted $links;
-          color: #E87F7B;
+          border-bottom: 0.05rem dotted #FFEA00;
+          color: #FFEA00;
           transition: all 0.5s ease;
         }
       }
@@ -39,7 +39,7 @@
       padding-left: 1em;
       transition: background-color 0.5s ease;
       &:hover {
-        background-color: #C8C8C8;
+        background-color: $dark;
         transition: background-color 0.5s ease;
       }
       & a {
@@ -47,10 +47,24 @@
         text-decoration: none;
         transition: color 0.5s ease;
         &:hover {
-          color: #E87F7B;
+          color: #FFEA00;
           transition: color 0.5s ease;
         }
       }
     }
+  }
+  & #repository {
+    a {
+      color: #E87F7B;
+      text-decoration: none;
+      transition: color 0.5s ease;
+      &:hover {
+        color: #FFEA00;
+        transition: color 0.5s ease;
+      }
+    }
+  }
+  & #iut img {
+    width: 100%;
   }
 }

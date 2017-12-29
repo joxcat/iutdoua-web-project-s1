@@ -22,7 +22,6 @@ Copyright (c) 2017 Johan Planchon.
     <meta name="theme-color" content="#448aff">
     <!-- css -->
     <link rel="stylesheet" href="/res/css/main.css" />
-    <link rel="stylesheet" href="/res/css/fontawesome_custom_CSS3_valid.css" /> <!-- Fontawesome icons workaround to be valid CSS3 : http://fontawesome.io -->
   </head>
   <body lang="fr">
     <a class="pop" id="QR" href="#">
@@ -30,7 +29,7 @@ Copyright (c) 2017 Johan Planchon.
         <p>
           Scannez ce QR code pour arriver ici !
         </p>
-        <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=https://market.kuro.ml/about"/>
+        <img alt="QR code page KMarket" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&ecc=M&margin=0&data=http://market.kuro.ml/about"/>
       </div>
     </a>
     <a class="pop" id="account" href="#">
@@ -91,7 +90,7 @@ Copyright (c) 2017 Johan Planchon.
     <div id="main">
       <a id="work" class="fa fa-bars fa-2x" href="#main"></a>
       <a id="disabled" class="fa fa-bars fa-2x"></a>
-      <form id="searchit" action="/#search">
+      <form id="searchit" action="/search">
         <input name="query" type="search" />
       </form>
       <a href="#top" id="return-to-top"><i class="fa fa-chevron-up fa-2x"></i></a>
@@ -105,45 +104,61 @@ Copyright (c) 2017 Johan Planchon.
             Nous d&eacute;clinons toute responsabilit&eacute;s sur des produits vendus ill&eacute;gallements, des produits vendus &agrave; des prix abusifs, ou encore sur les &eacute;ventuelles taxes douani&egrave;res &agrave; la r&eacute;c&eacute;ption. <span class="notvisible">Cordialement la direction...</span>
           </p>
         </section>
-        <section id="sources">
+        <section id="sources" class="dark">
           <h2>Sources</h2>
           <ul>
-            <li>Icones : <a href="http://fontawesome.io/">Fontawesome</a></li>
-            <li>Menu : <a href="https://codepen.io/markmurray/pen/yyNZpz">Off canvas menu (Codepen)</a></li>
-            <li>Barre de recherche : <a href="https://codepen.io/912lab/pen/LsplC">Expandable Search Form (Codepen)</a></li>
-            <li>Valeur des ombres : <a href="https://gist.github.com/paulmelnikow/7fcfbe4f68e5df7fe326">Google Material Design Shadow (Gist)</a></li>
+            <li>Icones : <a href="http://fontawesome.io/" target="_blank">Fontawesome</a></li>
+            <li>Menu : <a href="https://codepen.io/markmurray/pen/yyNZpz" target="_blank">Off canvas menu (Codepen)</a></li>
+            <li>Barre de recherche : <a href="https://codepen.io/912lab/pen/LsplC" target="_blank">Expandable Search Form (Codepen)</a></li>
+            <li>Valeur des ombres : <a href="https://gist.github.com/paulmelnikow/7fcfbe4f68e5df7fe326" target="_blank">Google Material Design Shadow (Gist)</a></li>
           </ul>
         </section>
         <section id="corr">
           <h2>Correspondance des pages</h2>
           <table>
             <tr>
-              <th>Page de garde</th><td><a href="https://market.kuro.ml/">KMarket</a></td>
+              <th>Page de garde</th><td><a href="http://market.kuro.ml/">KMarket</a></td>
             </tr>
             <tr>
-              <th>Page article 1</th><td><a href="https://market.kuro.ml/article/licorne.html">Vrai licorne</a></td>
+              <th>Page article 1</th><td><a href="http://market.kuro.ml/article/licorne.html">Vrai licorne</a></td>
             </tr>
             <tr>
-              <th>Page article 2</th><td><a href="https://market.kuro.ml/article/bitcoin.html">Premier bitcoin</a></td>
+              <th>Page article 2</th><td><a href="http://market.kuro.ml/article/bitcoin.html">Premier bitcoin</a></td>
             </tr>
             <tr>
-              <th>Page article 3</th><td><a href="https://market.kuro.ml/article/lutins.html">Brochette de lutins</a></td>
+              <th>Page article 3</th><td><a href="http://market.kuro.ml/article/lutins.html">Brochette de lutins</a></td>
             </tr>
             <tr>
-              <th>Page validation de commande</th><td><a href="https://market.kuro.ml/order">Commande</a></td>
+              <th>Page validation de commande</th><td><a href="http://market.kuro.ml/order">Commande</a></td>
             </tr>
             <tr>
-              <th>Qui sommes-nous ?</th><td><a href="https://market.kuro.ml/about">A propos</a></td>
+              <th>Qui sommes-nous ?</th><td><a href="http://market.kuro.ml/about">A propos</a></td>
+            </tr>
+            <tr>
+              <th>R&eacute;sultats de recherche</th><td><a href="http://market.kuro.ml/search">R&eacute;sultats de recherche</a></td>
             </tr>
           </table>
+        </section>
+        <section id="repository" class="dark">
+          <h2>Information projet</h2>
+          <p>
+            Site web r&eacute;alis&eacute; par Planchon Johan, &eacute;l&egrave;ve de premi&egrave;re ann&eacute;e &agrave; l'IUT Informatique de l'Universit&eacute; Claude Bernard dans le cadre du projet web de semestre 1.  (code source du site web ici : <a href="https://github.com/Blackksoulls/iutdoua-web-project-s1" target="_blank">repository</a>)
+          </p>
+          <p>
+            Tuteur : Monsieur <a href="http://champin.net">Champin</a>.
+          </p>
+        </section>
+        <section id="iut" class="last">
+          <h2>IUT Lyon 1</h2>
+          <a href="https://iut.univ-lyon1.fr/" target="_blank"><img alt="logo Université Claude Bernard Lyon 1" src="/res/pictures/logolyonl1iut.png" /></a>
         </section>
       </div>
     </div>
     <footer>
       <span>Copyright &copy; <a href="https://git.kuro.ml/" target="_blank">Johan Planchon</a> 2017</span>
       <span><a href="/about">Sources</a></span>
-      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmarket.kuro.ml%2Fabout%2F&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
-      <span><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmarket.kuro.ml%2Fabout%2F" target="_blank">HTML Valide !</a></span>
+      <span><a class="W3C" href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fmarket.kuro.ml%2Fabout%2F&profile=css3&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank"><img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" /></a></span>
+      <span><a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fmarket.kuro.ml%2Fabout%2F" target="_blank">HTML Valide !</a></span>
     </footer>
   </body>
 </html>

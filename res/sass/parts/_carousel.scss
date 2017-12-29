@@ -14,16 +14,6 @@
       color: $dark;
       text-decoration: none;
       transition: all 0.3s ease;
-      &:hover {
-        & h3 {
-          color: #888888;
-          transition: all 0.3s ease;
-        }
-        & img {
-          opacity: 0.75;
-          transition: all 0.3s ease;
-        }
-      }
       & h3 {
         font-family: 'Open Sans Condensed', "Helvetica", sans-serif;
         text-transform: uppercase;

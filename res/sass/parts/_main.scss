@@ -1,8 +1,8 @@
 /* core page */
 #main {
   margin-top: 0;
-  background: $light;
   min-height: 90vh;
+  background: $light;
   margin: 0 auto;
   transition: all 0.3s ease;
   z-index: 10;
@@ -20,11 +20,13 @@
     box-shadow: $box-shadow-2;
     & section {
       padding: 0 1em 0.25em 1em;
-      &:nth-of-type(1) { box-shadow: $box-shadow-4; }
-      &:nth-of-type(2) {
+      &:not(.dark) { box-shadow: $box-shadow-4; }
+      &.last {
+      border-radius: 0 0 0.3rem 0.3rem;
+      }
+      &.dark {
         background-color: $darkbg;
         color: $light;
-        border-radius: 0 0 0.3rem 0.3rem;
         & h2 {
           color: $light;
         }
@@ -45,6 +47,7 @@
 @media (max-width: #{$tablet-width - 1px}) {
   #main {
     padding: 0;
+    min-height: 0;
     & #work {
       margin: 1rem 0 0 2rem;
       float: left;
@@ -66,6 +69,12 @@
       max-width: 100%;
       width: 100vw;
       text-align: justify;
+      border-radius: 0;
+      & section {
+        &.last {
+          border-radius: 0;
+        }
+      }
     }
   }
   nav {
