@@ -592,6 +592,11 @@ footer span a:hover {
     right: 1rem;
     font-size: 0.80em;
   }
+  #recap ul li a:last-of-type:hover {
+    color: #971F1A;
+    font-size: 1em;
+    transition: all 0.5s ease;
+  }
   #recap ul li span {
     position: relative;
     top: 0;
