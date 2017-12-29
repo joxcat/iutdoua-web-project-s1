@@ -4,7 +4,7 @@
 
 .verified {
   font-weight: bold;
-  color: darken($links, 15%);
+  color: #AD231E;
 }
 
 .a_wrap {
@@ -13,7 +13,7 @@
     &:first-of-type {
       & img {
         border: 0.2em solid $light;
-        @include gbox-shadow(2);
+        box-shadow: $box-shadow-2;
         width:75%;
       }
       & #price {
@@ -46,17 +46,17 @@
       & table {
         background-color: $dark;
         border-radius: 0.3rem;
-        @include gbox-shadow(2);
+        box-shadow: $box-shadow-2;
         & th, td {
           padding: 0.3rem;
         }
         & th {
           text-align: left;
-          background-color: lighten($dark, 15%);
+          background-color: #7B7B7B;
         }
         & td {
           text-align: right;
-          background-color: lighten($dark, 30%);
+          background-color: #A2A2A2;
           & span {
             color: #D500F9;
             font-weight: bold;
@@ -81,10 +81,10 @@
         border-radius: 0.3rem;
         margin: 0.5em 0;
         font-size: 1.1em;
-        @include transition(opacity 0.5s ease);
+        transition: opacity 0.5s ease;
         &:hover, :focus {
           opacity: 1;
-          @include transition(opacity 0.5s ease);
+          transition: opacity 0.5s ease;
         }
       }
     }
@@ -92,7 +92,7 @@
       width: 35%;
       background-color: $dark;
       border-radius: 0.3rem;
-      @include gbox-shadow(2);
+      box-shadow: $box-shadow-2;
       margin-bottom: 2rem;
       & ul {
         padding: 0.5em 0.5em 0 0.5em;
@@ -104,7 +104,7 @@
           color: $dark;
           margin: 0 0 0.5em 0;
           border-radius: 0.2rem;
-          @include gbox-shadow(2);
+          box-shadow: $box-shadow-2;
           padding: 0.25rem;
           & span {
             padding-left: 0.5rem;
@@ -124,10 +124,10 @@
           padding: 0.1em 0.3em;
           opacity: 0.5;
           outline: none;
-          @include transition(opacity 0.5s ease);
+          transition: opacity 0.5s ease;
           &:focus {
             opacity: 1;
-            @include transition(opacity 0.5s ease);
+            transition: opacity 0.5s ease;
           }
         }
         & input {
@@ -144,11 +144,11 @@
             margin: 0.25em 40% 0.5em 40%;
             border-radius: 0.2rem;
             border-style: inset;
-            @include transition(opacity 0.5s ease);
+            transition: opacity 0.5s ease;
             opacity: 0.75;
             &:hover, &:focus {
               outline: none;
-              @include transition(opacity 0.5s ease);
+              transition: opacity 0.5s ease;
               opacity: 1;
             }
           }
@@ -168,7 +168,7 @@
   }
 }
 
-@include phone {
+@media (max-width: #{$tablet-width - 1px}) {
   .workaround-main-article { margin-top: -1rem !important; }
   #main:target.workaround-main-article { margin-top: 11rem !important; }
   .a_wrap > div {
@@ -186,9 +186,9 @@
       width: 100%;
     }
   }
-};
+}
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .a_wrap {
     display: flex;
     justify-content: space-between;

@@ -1,9 +1,9 @@
-// ### Menu highly inspired by https://codepen.io/markmurray/pen/yyNZpz ###
+/* Menu adapted from https://codepen.io/markmurray/pen/yyNZpz */
 /* menu interaction without js */
 #main:target {
   margin-top: 8rem;
   width: 90%;
-  @include transition(all 0.3s ease);
+  transition: all 0.3s ease;
 	& #work {
     display: none;
 	}
@@ -52,12 +52,12 @@ nav {
     li {
       text-align: center;
       cursor: pointer;
-      &:hover { opacity: 0.75; @include transition(all 0.3s ease); }
-      &:nth-child(1) i { @include iconize($light, #448AFF); }
-      &:nth-child(2) i { @include iconize($light, #FF5722); }*
-      &:nth-child(4) i { @include iconize($light, #01579B); }
-      &:nth-child(5) i { @include iconize($dark, #FFEB3B); }
-      &:nth-child(6) i { @include iconize($light, #303F9F); }
+      &:hover { opacity: 0.75; transition: all 0.3s ease; }
+      &:nth-child(1) i { color: $light; background-color: #448AFF; }
+      &:nth-child(2) i { color: $light; background-color: #FF5722; }
+      &:nth-child(4) i { color: $light; background-color: #01579B; }
+      &:nth-child(5) i { color: $dark; background-color: #FFEB3B; }
+      &:nth-child(6) i { color: $light; background-color: #303F9F; }
 
       i {
         font-size: 1.5em;
@@ -83,7 +83,7 @@ nav {
   }
 }
 
-@include phone {
+@media (max-width: #{$tablet-width - 1px}) {
   nav {
     top: 2%;
     & ul li {
@@ -94,4 +94,4 @@ nav {
   #main:target {
     margin-top: 37vh;
   }
-};
+}

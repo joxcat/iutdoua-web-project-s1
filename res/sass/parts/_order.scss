@@ -24,9 +24,9 @@
           top: 3rem;
           right: 3rem;
           &:hover {
-            color: darken($links, 20%);
+            color: #971F1A;
             font-size: 1.3em;
-            @include transition(all 0.5s ease);
+            transition: all 0.5s ease;
           }
         }
       }
@@ -46,7 +46,7 @@
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 0.5em;
-    color: darken($links, 20%);
+    color: #971F1A;
   }
 }
 
@@ -54,7 +54,7 @@
   margin: 0;
   float: none !important;
   & p {
-    color: darken($light, 5%);
+    color: #E1E3E5;
     &::before {
       content: ">";
       color: $primary;
@@ -65,29 +65,29 @@
   }
   & input:not([name="submit"]), select {
     padding-left: 0.5em;
-    background-color: lighten($dark, 40%);
-    color: lighten($dark, 15%);
+    background-color: #BBBBBB;
+    color: #7B7B7B;
     border: 0.1rem solid $light;
-    @include transition(all 0.5s ease);
-    @include gbox-shadow(1);
+    transition: all 0.5s ease;
+    box-shadow: $box-shadow-1;
     &:focus {
       background-color: $light;
-      @include transition(all 0.5s ease);
+      transition: all 0.5s ease;
     }
   }
   & input[name="submit"] {
     display: block;
     margin: 0.5rem auto;
-    @include transition(all 0.5s ease);
-    @include gbox-shadow(1);
+    transition: all 0.5s ease;
+    box-shadow: $box-shadow-1;
     &:hover {
       opacity: 0.80;
-      @include transition(all 0.5s ease);
+      transition: all 0.5s ease;
     }
   }
 }
 
-@include desktop {
+@media (min-width: #{$desktop-width}) {
   #commande form {
     display: flex;
     flex-flow: row wrap;
@@ -99,9 +99,9 @@
       font-size: 1.3em;
     }
   }
-};
+}
 
-@include phone {
+@media (max-width: #{$tablet-width - 1px}) {
   #recap ul {
     margin-bottom: 0.75em;
     & li {

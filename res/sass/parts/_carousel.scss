@@ -7,21 +7,21 @@
     background-color: $light;
     border-radius: 0.3rem;
     padding: 0.5em;
-    @include gbox-shadow(2);
+    box-shadow: $box-shadow-2;
     margin: 0 auto 0.75rem auto;
     overflow: hidden;
     & a {
       color: $dark;
       text-decoration: none;
-      @include transition(all 0.3s ease);
+      transition: all 0.3s ease;
       &:hover {
         & h3 {
-          color: lighten($dark, 20%);
-          @include transition(all 0.3s ease);
+          color: #888888;
+          transition: all 0.3s ease;
         }
         & img {
           opacity: 0.75;
-          @include transition(all 0.3s ease);
+          transition: all 0.3s ease;
         }
       }
       & h3 {
@@ -51,7 +51,7 @@
       }
     }
     & img {
-      @include transition(all 0.3s ease);
+      transition: all 0.3s ease;
       margin: 0 15%;
       width: 70%;
       height: 52.5%;
@@ -64,12 +64,12 @@
       top: -0.5em;
       font-weight: bold;
       text-decoration: line-through;
-      color: lighten($dark, 20%);
+      color: #888888;
     }
   }
 }
 
-@include phone {
+@media (max-width: #{$tablet-width - 1px}) {
   .carousel .card {
     max-width: 100%;
     & p:first-of-type {
@@ -84,21 +84,21 @@
       padding-right: 6%;
     }
   }
-};
+}
 
-@include desktop {
+@media (min-width: #{$desktop-width}) {
   .carousel .card {
     width: 30%;
-    @include transition(all 0.5s ease);
+    transition: all 0.5s ease;
     &:hover {
       opacity: 1;
-      @include transition(all 0.5s ease);
+      transition: all 0.5s ease;
       width: 35%;
     }
     &:not(:hover) {
-      @include transition(all 0.5s ease);
+      transition: all 0.5s ease;
       opacity: 0.5;
       width: 25%;
     }
   }
-};
+}
