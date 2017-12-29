@@ -110,6 +110,11 @@
         top: -11.3rem;
         right: 1rem;
         font-size: 0.80em;
+        &:hover {
+          color: #971F1A;
+          font-size: 1em;
+          transition: all 0.5s ease;
+        }
       }
       & span {
         position: relative;
